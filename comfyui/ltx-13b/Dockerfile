@@ -106,8 +106,7 @@ RUN mkdir -p /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly && \
 #       -o ltxv-13b-0.9.8-distilled.safetensors; \
 #     fi
 
-# Install LTXVideo-Q8-Kernels for quantized model support
-RUN pip3 install --no-cache-dir ltxvideo-q8-kernels
+
 
 # Copy comfyui supervisor configuration
 COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
