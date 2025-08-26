@@ -9,13 +9,6 @@ RUN apt update -y && apt install -y supervisor && \
     mkdir -p /opt/supervisor && \
     apt clean
 
-# install jupyter
-RUN pip install jupyter && \
-    pip install nvitop && \
-    pip cache purge
-COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
-COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
-
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
@@ -27,6 +20,8 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     libgl1-mesa-glx \
     libglib2.0-0 \
+    nodejs \
+    npm \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -53,6 +48,13 @@ RUN cd /opt/ComfyUI/custom_nodes && \
     git clone https://github.com/ltdrdata/ComfyUI-Manager.git && \
     cd ComfyUI-Manager && \
     pip3 install --no-cache-dir -r requirements.txt
+
+# install jupyter
+RUN pip3 install jupyterlab && \
+    pip3 install nvitop && \
+    pip3 cache clear
+COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
+COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
 
 # Install VideoHelperSuite (required for example workflows)
 RUN cd /opt/ComfyUI/custom_nodes && \
