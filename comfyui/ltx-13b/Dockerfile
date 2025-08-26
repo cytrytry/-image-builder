@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
     nodejs \
     npm \
+    aria2 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -68,14 +69,42 @@ RUN mkdir -p /opt/ComfyUI/models/checkpoints \
     /opt/ComfyUI/models/upscale_models \
     /opt/ComfyUI/models/t5_models
 
-# Download LTXVideo model and T5 encoder
-RUN wget -q https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.8-distilled.safetensors -O /opt/ComfyUI/models/checkpoints/ltxv-13b-0.9.8-distilled.safetensors && \
-    mkdir -p /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly && \
-    wget -q https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/config.json -O /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly/config.json && \
-    wget -q https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/model.safetensors -O /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly/model.safetensors && \
-    wget -q https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/special_tokens_map.json -O /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly/special_tokens_map.json && \
-    wget -q https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/tokenizer_config.json -O /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly/tokenizer_config.json && \
-    wget -q https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/tokenizer.json -O /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly/tokenizer.json
+# Download models using aria2c for better performance and reliability
+RUN cd /opt/ComfyUI/models/checkpoints && \
+    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.8-distilled.safetensors \
+    -o ltxv-13b-0.9.8-distilled.safetensors || echo "Model download failed, you may need to download manually"
+
+# Download T5 encoder files
+RUN mkdir -p /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly && \
+    cd /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly && \
+    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
+    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/config.json \
+    -o config.json || echo "Config download failed" && \
+    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
+    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/model.safetensors \
+    -o model.safetensors || echo "Model download failed" && \
+    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
+    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/special_tokens_map.json \
+    -o special_tokens_map.json || echo "Tokens map download failed" && \
+    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
+    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/tokenizer_config.json \
+    -o tokenizer_config.json || echo "Tokenizer config download failed" && \
+    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
+    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/tokenizer.json \
+    -o tokenizer.json || echo "Tokenizer download failed"
+
+# Note: If downloads fail, you may need to manually download these files after container creation
+# or use Hugging Face CLI with authentication
+# 
+# Alternative method using HF token:
+# ARG HF_TOKEN
+# RUN if [ ! -z "$HF_TOKEN" ]; then \
+#       cd /opt/ComfyUI/models/checkpoints && \
+#       aria2c -k 1M -s 10 -x 10 --header="Authorization: Bearer ${HF_TOKEN}" \
+#       https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.8-distilled.safetensors \
+#       -o ltxv-13b-0.9.8-distilled.safetensors; \
+#     fi
 
 # Install LTXVideo-Q8-Kernels for quantized model support
 RUN pip3 install --no-cache-dir ltxvideo-q8-kernels
