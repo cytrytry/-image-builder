@@ -52,7 +52,7 @@ RUN cd /opt/ComfyUI/custom_nodes && \
 # install jupyter
 RUN pip3 install jupyterlab && \
     pip3 install nvitop && \
-    pip3 cache clear
+    pip3 cache purge
 COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
 COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
 
