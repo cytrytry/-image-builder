@@ -69,23 +69,29 @@ RUN cd /opt/ComfyUI/custom_nodes && \
     cd ComfyUI-Custom-Scripts && \
     pip3 install --no-cache-dir -r requirements.txt || echo "No requirements.txt found"
 
+# Install ComfyUI-KJNodes (provides ImageResizeKJ node)
+RUN cd /opt/ComfyUI/custom_nodes && \
+    git clone https://github.com/kijai/ComfyUI-KJNodes.git && \
+    cd ComfyUI-KJNodes && \
+    pip3 install --no-cache-dir -r requirements.txt || echo "No requirements.txt found"
+
 # Create model directories
 RUN mkdir -p /opt/ComfyUI/models/checkpoints
 
 # Create clip directory
 RUN mkdir -p /opt/ComfyUI/models/clip
 
-# Download LTX Video FP8 Quantized model 
+# Download LTX Video FP8 Quantized model
 RUN cd /opt/ComfyUI/models/checkpoints && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
     https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors \
-    -o ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors || echo "Model download failed, you may need to download manually"
+    -o ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors
 
-# Download T5 CLIP model for LTX Video 
+# Download T5 CLIP model for LTX Video
 RUN cd /opt/ComfyUI/models/clip && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
     https://huggingface.co/Lightricks/LTX-Video/resolve/main/t5xxl_fp16.safetensors \
-    -o t5xxl_fp16.safetensors || echo "CLIP model download failed, you may need to download manually"
+    -o t5xxl_fp16.safetensors
 
 # Create upscale_models directory and download upscaler
 RUN mkdir -p /opt/ComfyUI/models/upscale_models && \
@@ -109,8 +115,13 @@ RUN pip3 install --no-cache-dir einops transformers
 #       -o ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors; \
 #     fi
 
+# Create a simple startup script
+RUN echo '#!/bin/bash\n\
+# Start ComfyUI\n\
+cd /opt/ComfyUI && python3 main.py --listen 0.0.0.0\n\
+' > /opt/supervisor/comfyui.sh && chmod +x /opt/supervisor/comfyui.sh
+
 # Copy comfyui supervisor configuration
-COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
 COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 
 # Create default workflows directory
