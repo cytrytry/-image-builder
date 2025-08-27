@@ -84,13 +84,13 @@ RUN mkdir -p /opt/ComfyUI/models/clip
 # Download LTX Video 13B FP8 Quantized model (from NextDiffusion tutorial)
 RUN cd /opt/ComfyUI/models/checkpoints && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors \
+    https://huggingface.co/Kijai/LTXV/blob/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors \
     -o ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors
 
 # Download T5 CLIP model for LTX Video (from NextDiffusion tutorial)
 RUN cd /opt/ComfyUI/models/clip && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/Lightricks/LTX-Video/resolve/main/t5xxl_fp8_e4m3fn.safetensors \
+    https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/t5xxl_fp8_e4m3fn.safetensors \
     -o t5xxl_fp8_e4m3fn.safetensors
 
 # Download spatial upscaler (used in workflow)
