@@ -101,18 +101,29 @@ RUN pip3 install --no-cache-dir einops transformers
 # Install required dependencies for LTX-Video-Q8-Kernels
 RUN pip3 install --no-cache-dir packaging wheel ninja setuptools typing-extensions
 
-# Install LTX-Video-Q8-Kernels from GitHub for FP8 model support
-# Using QXL virtual GPU, we need to bypass the NVIDIA GPU check
-RUN cd /tmp && \
-    git clone https://github.com/Lightricks/LTX-Video-Q8-Kernels.git && \
-    cd LTX-Video-Q8-Kernels && \
-    sed -i 's/device_arch = get_device_arch()/device_arch = (8, 9)  # Force SM89 for Hopper architecture/' setup.py && \
-    FORCE_CUDA=1 pip3 install --no-build-isolation -e .
+# Skip LTX-Video-Q8-Kernels installation as it requires actual NVIDIA GPU for compilation
+# The kernels will need to be installed when deployed to a machine with GPU
+RUN echo "Skipping LTX-Video-Q8-Kernels installation - will be installed on deployment to GPU machine"
+
+# Create a placeholder directory for LTX-Video-Q8-Kernels
+# This is to avoid import errors when running ComfyUI
+RUN mkdir -p /opt/conda/lib/python3.11/site-packages/q8_kernels_cuda
 
 # Note: The models from NextDiffusion tutorial should be publicly available without authentication
 
-# Create a simple startup script
+# Create a startup script that installs LTX-Video-Q8-Kernels if GPU is available
 RUN echo '#!/bin/bash\n\
+# Check if NVIDIA GPU is available\n\
+if [ -c /dev/nvidia0 ] || [ -c /dev/nvidia-uvm ]; then\n\
+  echo "NVIDIA GPU detected, installing LTX-Video-Q8-Kernels..."\n\
+  cd /tmp && \\\n\
+  git clone https://github.com/Lightricks/LTX-Video-Q8-Kernels.git && \\\n\
+  cd LTX-Video-Q8-Kernels && \\\n\
+  pip3 install --no-build-isolation -e .\n\
+else\n\
+  echo "No NVIDIA GPU detected, skipping LTX-Video-Q8-Kernels installation"\n\
+fi\n\
+\n\
 # Start ComfyUI\n\
 cd /opt/ComfyUI && python3 main.py --listen 0.0.0.0\n\
 ' > /opt/supervisor/comfyui.sh && chmod +x /opt/supervisor/comfyui.sh
