@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
+FROM pytorch/pytorch:2.8.0-cuda12.8-cudnn9-devel
 
 ENV PYTHONUNBUFFERED=1
 ENV DEBIAN_FRONTEND=noninteractive
@@ -20,8 +20,6 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     libgl1-mesa-glx \
     libglib2.0-0 \
-    nodejs \
-    npm \
     aria2 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
@@ -104,10 +102,12 @@ RUN pip3 install --no-cache-dir einops transformers
 RUN pip3 install --no-cache-dir packaging wheel ninja setuptools typing-extensions
 
 # Install LTX-Video-Q8-Kernels from GitHub for FP8 model support
+# Using QXL virtual GPU, we need to bypass the NVIDIA GPU check
 RUN cd /tmp && \
     git clone https://github.com/Lightricks/LTX-Video-Q8-Kernels.git && \
     cd LTX-Video-Q8-Kernels && \
-    pip3 install --no-build-isolation -e .
+    sed -i 's/device_arch = get_device_arch()/device_arch = (8, 9)  # Force SM89 for Hopper architecture/' setup.py && \
+    FORCE_CUDA=1 pip3 install --no-build-isolation -e .
 
 # Note: The models from NextDiffusion tutorial should be publicly available without authentication
 
