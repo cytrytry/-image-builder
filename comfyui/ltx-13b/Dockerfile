@@ -63,23 +63,36 @@ RUN cd /opt/ComfyUI/custom_nodes && \
     cd ComfyUI-VideoHelperSuite && \
     pip3 install --no-cache-dir -r requirements.txt
 
+# Install ComfyUI-Custom-Scripts (provides ImageResizeKJ node)
+RUN cd /opt/ComfyUI/custom_nodes && \
+    git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git && \
+    cd ComfyUI-Custom-Scripts && \
+    pip3 install --no-cache-dir -r requirements.txt || echo "No requirements.txt found"
+
 # Create model directories
 RUN mkdir -p /opt/ComfyUI/models/checkpoints
 
 # Create clip directory
 RUN mkdir -p /opt/ComfyUI/models/clip
 
-# Download LTX Video 13B 0.9.7 FP8 Quantized model
+# Download LTX Video FP8 Quantized model 
 RUN cd /opt/ComfyUI/models/checkpoints && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors \
-    -o ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors || echo "Model download failed, you may need to download manually"
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors \
+    -o ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors || echo "Model download failed, you may need to download manually"
 
-# Download T5 CLIP model for LTX Video
+# Download T5 CLIP model for LTX Video 
 RUN cd /opt/ComfyUI/models/clip && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/Lightricks/LTX-Video/resolve/main/t5xxl_fp8_e4m3fn.safetensors \
-    -o t5xxl_fp8_e4m3fn.safetensors || echo "CLIP model download failed, you may need to download manually"
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/t5xxl_fp16.safetensors \
+    -o t5xxl_fp16.safetensors || echo "CLIP model download failed, you may need to download manually"
+
+# Create upscale_models directory and download upscaler
+RUN mkdir -p /opt/ComfyUI/models/upscale_models && \
+    cd /opt/ComfyUI/models/upscale_models && \
+    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-spatial-upscaler-0.9.8.safetensors \
+    -o ltxv-spatial-upscaler-0.9.8.safetensors || echo "Spatial upscaler download failed"
 
 # Install additional dependencies for LTX Video 13B 0.9.7
 RUN pip3 install --no-cache-dir einops transformers
@@ -92,8 +105,8 @@ RUN pip3 install --no-cache-dir einops transformers
 # RUN if [ ! -z "$HF_TOKEN" ]; then \
 #       cd /opt/ComfyUI/models/checkpoints && \
 #       aria2c -k 1M -s 10 -x 10 --header="Authorization: Bearer ${HF_TOKEN}" \
-#       https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors \
-#       -o ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors; \
+#       https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors \
+#       -o ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors; \
 #     fi
 
 # Copy comfyui supervisor configuration
