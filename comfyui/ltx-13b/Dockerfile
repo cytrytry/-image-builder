@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04
+FROM nvidia/cuda:12.8.0-cudnn9-devel-ubuntu22.04
 
 ENV PYTHONUNBUFFERED=1
 ENV DEBIAN_FRONTEND=noninteractive
@@ -34,7 +34,7 @@ RUN git clone https://github.com/comfyanonymous/ComfyUI.git
 WORKDIR /opt/ComfyUI
 
 # Install Python dependencies
-RUN pip3 install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+RUN pip3 install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Install ComfyUI-LTXVideo
@@ -103,11 +103,14 @@ RUN mkdir -p /opt/ComfyUI/models/upscale_models && \
 # Install additional dependencies for LTX Video 13B 0.9.7
 RUN pip3 install --no-cache-dir einops transformers
 
+# Install required dependencies for LTX-Video-Q8-Kernels
+RUN pip3 install --no-cache-dir packaging wheel ninja setuptools typing-extensions
+
 # Install LTX-Video-Q8-Kernels from GitHub for FP8 model support
 RUN cd /tmp && \
     git clone https://github.com/Lightricks/LTX-Video-Q8-Kernels.git && \
     cd LTX-Video-Q8-Kernels && \
-    pip3 install -e .
+    pip3 install --no-build-isolation -e .
 
 # Note: The models from NextDiffusion tutorial should be publicly available without authentication
 
