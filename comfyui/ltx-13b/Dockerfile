@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.8.0-cudnn9-devel-ubuntu22.04
+FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
 
 ENV PYTHONUNBUFFERED=1
 ENV DEBIAN_FRONTEND=noninteractive
@@ -33,9 +33,6 @@ WORKDIR /opt
 RUN git clone https://github.com/comfyanonymous/ComfyUI.git
 WORKDIR /opt/ComfyUI
 
-# Install Python dependencies
-RUN pip3 install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
-RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Install ComfyUI-LTXVideo
 RUN mkdir -p custom_nodes && \
