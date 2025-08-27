@@ -2033,7 +2033,7 @@
       },
       "38": {
         "inputs": {
-          "clip_name": "t5xxl_fp16.safetensors",
+          "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
           "type": "ltxv",
           "device": "default"
         },
@@ -2044,7 +2044,7 @@
       },
       "44": {
         "inputs": {
-          "ckpt_name": "ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors"
+          "ckpt_name": "ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors"
         },
         "class_type": "CheckpointLoaderSimple",
         "_meta": {

@@ -81,39 +81,29 @@ RUN mkdir -p /opt/ComfyUI/models/checkpoints
 # Create clip directory
 RUN mkdir -p /opt/ComfyUI/models/clip
 
-# Download LTX Video FP8 Quantized model
+# Download LTX Video 13B FP8 Quantized model (from NextDiffusion tutorial)
 RUN cd /opt/ComfyUI/models/checkpoints && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors \
-    -o ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors \
+    -o ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors
 
-# Download T5 CLIP model for LTX Video
+# Download T5 CLIP model for LTX Video (from NextDiffusion tutorial)
 RUN cd /opt/ComfyUI/models/clip && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/Lightricks/LTX-Video/resolve/main/t5xxl_fp16.safetensors \
-    -o t5xxl_fp16.safetensors
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/t5xxl_fp8_e4m3fn.safetensors \
+    -o t5xxl_fp8_e4m3fn.safetensors
 
-# Create upscale_models directory and download upscaler
+# Download spatial upscaler (used in workflow)
 RUN mkdir -p /opt/ComfyUI/models/upscale_models && \
     cd /opt/ComfyUI/models/upscale_models && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-spatial-upscaler-0.9.8.safetensors \
-    -o ltxv-spatial-upscaler-0.9.8.safetensors || echo "Spatial upscaler download failed"
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-spatial-upscaler-0.9.7.safetensors \
+    -o ltxv-spatial-upscaler-0.9.8.safetensors
 
 # Install additional dependencies for LTX Video 13B 0.9.7
 RUN pip3 install --no-cache-dir einops transformers
 
-# Note: If downloads fail, you may need to manually download these files after container creation
-# or use Hugging Face CLI with authentication
-# 
-# Alternative method using HF token:
-# ARG HF_TOKEN
-# RUN if [ ! -z "$HF_TOKEN" ]; then \
-#       cd /opt/ComfyUI/models/checkpoints && \
-#       aria2c -k 1M -s 10 -x 10 --header="Authorization: Bearer ${HF_TOKEN}" \
-#       https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors \
-#       -o ltxv-13b-fp8-0.9.6-dev-rc1-04-25.safetensors; \
-#     fi
+# Note: The models from NextDiffusion tutorial should be publicly available without authentication
 
 # Create a simple startup script
 RUN echo '#!/bin/bash\n\
@@ -127,8 +117,8 @@ COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 # Create default workflows directory
 RUN mkdir -p /opt/ComfyUI/user/default/workflows
 
-# Copy LTXVideo default workflow
-COPY comfyui/ltxv-13b-i2v-base-fp8.json /opt/ComfyUI/user/default/workflows/ltxv-13b-i2v-base-fp8.json
+# Copy workflow file directly
+COPY comfyui/ltxv-13b-i2v-base-fp8.json /opt/ComfyUI/user/default/workflows/
 
 # Expose port
 EXPOSE 8188
