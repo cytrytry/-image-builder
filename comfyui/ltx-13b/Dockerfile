@@ -64,35 +64,25 @@ RUN cd /opt/ComfyUI/custom_nodes && \
     pip3 install --no-cache-dir -r requirements.txt
 
 # Create model directories
-RUN mkdir -p /opt/ComfyUI/models/checkpoints \
-    /opt/ComfyUI/models/clip_vision \
-    /opt/ComfyUI/models/upscale_models \
-    /opt/ComfyUI/models/t5_models
+RUN mkdir -p /opt/ComfyUI/models/checkpoints
 
-# Download models using aria2c for better performance and reliability
+# Create clip directory
+RUN mkdir -p /opt/ComfyUI/models/clip
+
+# Download LTX Video 13B 0.9.7 FP8 Quantized model
 RUN cd /opt/ComfyUI/models/checkpoints && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.8-distilled.safetensors \
-    -o ltxv-13b-0.9.8-distilled.safetensors || echo "Model download failed, you may need to download manually"
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors \
+    -o ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors || echo "Model download failed, you may need to download manually"
 
-# Download T5 encoder files
-RUN mkdir -p /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly && \
-    cd /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly && \
+# Download T5 CLIP model for LTX Video
+RUN cd /opt/ComfyUI/models/clip && \
     aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/config.json \
-    -o config.json || echo "Config download failed" && \
-    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/model.safetensors \
-    -o model.safetensors || echo "Model download failed" && \
-    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/special_tokens_map.json \
-    -o special_tokens_map.json || echo "Tokens map download failed" && \
-    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/tokenizer_config.json \
-    -o tokenizer_config.json || echo "Tokenizer config download failed" && \
-    aria2c -k 1M -s 10 -x 10 --retry-wait=10 --max-tries=5 \
-    https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/tokenizer.json \
-    -o tokenizer.json || echo "Tokenizer download failed"
+    https://huggingface.co/Lightricks/LTX-Video/resolve/main/t5xxl_fp8_e4m3fn.safetensors \
+    -o t5xxl_fp8_e4m3fn.safetensors || echo "CLIP model download failed, you may need to download manually"
+
+# Install additional dependencies for LTX Video 13B 0.9.7
+RUN pip3 install --no-cache-dir einops transformers
 
 # Note: If downloads fail, you may need to manually download these files after container creation
 # or use Hugging Face CLI with authentication
@@ -102,11 +92,9 @@ RUN mkdir -p /opt/ComfyUI/models/t5_models/google_t5-v1_1-xxl_encoderonly && \
 # RUN if [ ! -z "$HF_TOKEN" ]; then \
 #       cd /opt/ComfyUI/models/checkpoints && \
 #       aria2c -k 1M -s 10 -x 10 --header="Authorization: Bearer ${HF_TOKEN}" \
-#       https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.8-distilled.safetensors \
-#       -o ltxv-13b-0.9.8-distilled.safetensors; \
+#       https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors \
+#       -o ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors; \
 #     fi
-
-
 
 # Copy comfyui supervisor configuration
 COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
@@ -116,7 +104,7 @@ COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 RUN mkdir -p /opt/ComfyUI/user/default/workflows
 
 # Copy LTXVideo default workflow
-COPY comfyui/ltxvideo-flow-edit.json /opt/ComfyUI/user/default/workflows/ltxvideo-flow-edit.json
+COPY comfyui/ltxv-13b-i2v-base-fp8.json /opt/ComfyUI/user/default/workflows/ltxv-13b-i2v-base-fp8.json
 
 # Expose port
 EXPOSE 8188
