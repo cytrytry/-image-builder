@@ -1,0 +1,50 @@
+ARG BASE_IMAGE=pytorch/pytorch:2.8.0-cuda12.8-cudnn9-devel
+FROM ${BASE_IMAGE}
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+# for China
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
+    sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' /etc/apt/sources.list
+
+# install supervisord
+RUN apt update -y && apt install -y supervisor && \
+    mkdir -p /var/log/supervisord && \
+    mkdir -p /opt/supervisor && \
+    apt clean
+
+
+ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+
+# install system packages
+RUN apt update -y && apt install -y \
+        python3 python-is-python3 python3-pip \
+        git git-lfs curl wget ca-certificates \
+        sudo bzip2 libx11-6 vim net-tools iproute2 && \
+    apt clean
+
+    # for China
+RUN python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip && \
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# install jupyter
+RUN pip install jupyter && \
+    pip install nvitop && \
+    pip cache purge
+COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
+COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
+
+# install sshd
+RUN apt-get install -y openssh-server && \
+    echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && \
+    mkdir -p /run/sshd && \
+    apt clean
+COPY sshd/sshd.sh         /opt/supervisor/sshd.sh
+COPY sshd/sshd.conf       /etc/supervisor/conf.d/sshd.conf
+
+WORKDIR /root
+ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+CMD []
+
+# install nvtop
+RUN apt install -y nvtop && apt clean
