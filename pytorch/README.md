@@ -1,0 +1,1 @@
+docker run -it --rm -e "PUBLIC_KEY=$(cat ~/.ssh/id_rsa.pub)" -e "SSH_PASSWORD=1234" -e "JUPYTER_PASSWORD=1234" -p 8888:8888 -p 2222:22 --gpus all novitalabs/2.8.0-cuda12.8-cudnn9-devel
