@@ -26,4 +26,3 @@ exec jupyter lab \
     --ServerApp.token="$JUPYTER_PASSWORD" \
     --ServerApp.allow_origin=* \
     --ServerApp.preferred_dir="$JUPYTER_PREFERRED_DIR"
-
