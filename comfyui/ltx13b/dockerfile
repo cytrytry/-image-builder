@@ -41,7 +41,7 @@ RUN cd /root/ComfyUI/models/checkpoints/ && \
     aria2c -k 1M -s 10 -x 10 https://huggingface.co/Kijai/LTXV/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors
 
 # Download the Required CLIP Model
-RUN  cd /root/ComfyUI/models/clip/ && \
+RUN cd /root/ComfyUI/models/clip/ && \
     aria2c -k 1M -s 10 -x 10 https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors
 
 
