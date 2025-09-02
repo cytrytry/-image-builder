@@ -37,14 +37,10 @@ WORKDIR /root/ComfyUI
 RUN cd custom_nodes && git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
 
 # Download the FP8 Quantized Model
-RUN mkdir -p /root/ComfyUI/models/checkpoints/ && \
-    cd /root/ComfyUI/models/checkpoints/ && \
-    aria2c -k 1M -s 10 -x 10 https://huggingface.co/Kijai/LTXV/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors
+RUN cd models/checkpoints/ && aria2c -k 1M -s 10 -x 10 https://huggingface.co/Kijai/LTXV/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors
 
 # Download the Required CLIP Model
-RUN mkdir -p /root/ComfyUI/models/clip/ && \
-    cd /root/ComfyUI/models/clip/ && \
-    aria2c -k 1M -s 10 -x 10 https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors
+RUN cd /models/clip/ && aria2c -k 1M -s 10 -x 10 https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors
 
 
 # Copy comfyui supervisor configuration
