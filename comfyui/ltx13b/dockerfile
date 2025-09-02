@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED=1
 RUN apt update -y && apt install -y supervisor && \
     mkdir -p /var/log/supervisord && \
     mkdir -p /opt/supervisor && \
-    apt clean \
+    apt clean 
 
 # install system packages
 RUN apt update -y && apt install -y \
