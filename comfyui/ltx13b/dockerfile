@@ -57,8 +57,8 @@ RUN cd /root/ComfyUI/models/clip/ && \
 COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
 COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 
-#Copy ltx13b-i2v-base default workflow
-COPY comfyui/ltxv-13b-i2v-base.json /root/ComfyUI/user/default/workflows/ltxv-13b-i2v-base.json
+#Copy ltx13b-i2v default workflow
+COPY comfyui/ltxv-13b-i2v.json /root/ComfyUI/user/default/workflows/ltxv-13b-i2v.json
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
 
