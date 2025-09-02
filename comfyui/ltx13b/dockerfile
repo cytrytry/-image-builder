@@ -14,6 +14,8 @@ RUN apt update -y && apt install -y supervisor && \
 # install system packages
 RUN apt update -y && apt install -y \
         python3 python-is-python3 python3-pip \
+        libgl1-mesa-glx \
+        libglib2.0-0 \
         git aria2 && \
     apt clean
 
@@ -33,16 +35,22 @@ RUN cd /root && git clone https://github.com/comfyanonymous/ComfyUI && \
 
 WORKDIR /root/ComfyUI
 
+#Download comfyui-ltxvideo
+RUN cd custom_nodes && git clone https://github.com/Lightricks/ComfyUI-LTXVideo.git comfyui-ltxvideo
+
+#Download comfyui-videohelpersuite
+RUN cd custom_nodes && git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git comfyui-videohelpersuite
+
 #Download comfyui-manager
 RUN cd custom_nodes && git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
 
 # Download the FP8 Quantized Model
 RUN cd /root/ComfyUI/models/checkpoints/ && \
-    aria2c -k 1M -s 10 -x 10 https://huggingface.co/Kijai/LTXV/resolve/main/ltxv-13b-0.9.7-dev_fp8_e4m3fn.safetensors
+    aria2c -k 1M -s 10 -x 10 https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev.safetensors -o ltxv-13b-0.9.7-dev.safetensors
 
 # Download the Required CLIP Model
 RUN cd /root/ComfyUI/models/clip/ && \
-    aria2c -k 1M -s 10 -x 10 https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors
+    aria2c -k 1M -s 10 -x 10 https://huggingface.co/Comfy-Org/mochi_preview_repackaged/resolve/main/split_files/text_encoders/t5xxl_fp16.safetensors -o t5xxl_fp16.safetensors
 
 
 # Copy comfyui supervisor configuration
@@ -53,3 +61,4 @@ COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 COPY comfyui/ltxv-13b-i2v-base.json /root/ComfyUI/user/default/workflows/ltxv-13b-i2v-base.json
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+
