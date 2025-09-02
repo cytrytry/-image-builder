@@ -16,7 +16,7 @@
         78
       ],
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -70,7 +70,7 @@
         213.2843780517578
       ],
       "flags": {},
-      "order": 14,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -101,44 +101,6 @@
       ],
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 38,
-      "type": "CLIPLoader",
-      "pos": [
-        347.74371337890625,
-        2311.21337890625
-      ],
-      "size": [
-        315,
-        106
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "slot_index": 0,
-          "links": [
-            74,
-            75
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "CLIPLoader",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "t5xxl_fp16.safetensors",
-        "ltxv",
-        "default"
-      ]
     },
     {
       "id": 1335,
@@ -195,7 +157,7 @@
         82
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [
         {
@@ -236,7 +198,7 @@
         120.61924743652344
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -261,7 +223,7 @@
         88
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -286,7 +248,7 @@
         171.05442810058594
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -311,7 +273,7 @@
         88
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -336,7 +298,7 @@
         106
       ],
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -378,7 +340,7 @@
         58
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -412,7 +374,7 @@
         88
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -437,7 +399,7 @@
         334
       ],
       "flags": {},
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -516,7 +478,7 @@
         130
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -541,7 +503,7 @@
         58
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -622,6 +584,16 @@
           "links": [
             3576
           ]
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": null
         }
       ],
       "properties": {
@@ -642,46 +614,6 @@
       ]
     },
     {
-      "id": 1206,
-      "type": "LoadImage",
-      "pos": [
-        1066.6751708984375,
-        2599.134765625
-      ],
-      "size": [
-        342.5999755859375,
-        314
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            5361
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.30",
-        "Node name for S&R": "LoadImage",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "ComfyUI_temp_hflos_00005_.png",
-        "image"
-      ]
-    },
-    {
       "id": 1507,
       "type": "RandomNoise",
       "pos": [
@@ -693,7 +625,7 @@
         82
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -791,7 +723,7 @@
         204.2556610107422
       ],
       "flags": {},
-      "order": 13,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -824,55 +756,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 44,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        688.3630981445312,
-        2674.54052734375
-      ],
-      "size": [
-        334.6303405761719,
-        98
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            5372
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": []
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "slot_index": 2,
-          "links": [
-            5243,
-            5378
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "CheckpointLoaderSimple",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "ltxv-13b-0.9.7-dev.safetensors"
-      ]
-    },
-    {
       "id": 1874,
       "type": "LTXQ8Patch",
       "pos": [
@@ -884,7 +767,7 @@
         58
       ],
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 4,
       "inputs": [
         {
@@ -981,13 +864,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "ltxv-base_00002.mp4",
+            "filename": "ltxv-base_00001.mp4",
             "subfolder": "",
             "type": "temp",
             "format": "video/h264-mp4",
             "frame_rate": 24,
-            "workflow": "ltxv-base_00002.png",
-            "fullpath": "C:\\Users\\users_uyemc1z\\git\\ComfyUI\\temp\\ltxv-base_00002.mp4"
+            "workflow": "ltxv-base_00001.png",
+            "fullpath": "/root/ComfyUI/temp/ltxv-base_00001.mp4"
           }
         }
       }
@@ -1004,7 +887,7 @@
         130
       ],
       "flags": {},
-      "order": 17,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1033,6 +916,133 @@
         0.025,
         668731452790443,
         "fixed"
+      ]
+    },
+    {
+      "id": 1206,
+      "type": "LoadImage",
+      "pos": [
+        1066.6751708984375,
+        2599.134765625
+      ],
+      "size": [
+        342.5999755859375,
+        314
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5361
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.30",
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ComfyUI_temp_hflos_00005.png",
+        "image"
+      ]
+    },
+    {
+      "id": 44,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        688.3630981445312,
+        2674.54052734375
+      ],
+      "size": [
+        334.6303405761719,
+        98
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            5372
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": []
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            5243,
+            5378
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ltxv-13b-0.9.7-dev.safetensors"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "CLIPLoader",
+      "pos": [
+        347.74371337890625,
+        2311.21337890625
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            74,
+            75
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CLIPLoader",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "t5xxl_fp16.safetensors",
+        "ltxv",
+        "default"
       ]
     }
   ],
@@ -1245,13 +1255,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.083470594338841,
+      "scale": 0.7400249944258189,
       "offset": [
-        -2243.056513087443,
-        -2266.978297546156
+        38.29386970489835,
+        -2042.8301634294694
       ]
     },
-    "frontendVersion": "1.18.9",
+    "frontendVersion": "1.25.11",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
