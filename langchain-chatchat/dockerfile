@@ -32,7 +32,7 @@ WORKDIR /root
 # =========================
 
 # 先安装 Xinference
-RUN pip install "xinference[all]" -U
+RUN pip install xinference
 
 COPY xinference/xinference.sh       /opt/supervisor/xinference.sh
 COPY xinference/xinference.conf     /etc/supervisor/conf.d/xinference.conf
