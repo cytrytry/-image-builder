@@ -38,8 +38,9 @@ COPY xinference/xinference.sh       /opt/supervisor/xinference.sh
 COPY xinference/xinference.conf     /etc/supervisor/conf.d/xinference.conf
 
 # 再安装 Langchain-Chatchat（带 Xinference 支持）
-RUN cd /root && pip install "langchain-chatchat[xinference]" -U && \
-cd Langchain-Chatchat && pip install -r requirements.txt
+RUN git clone https://github.com/chatchat-space/Langchain-Chatchat.git /root/Langchain-Chatchat && \
+    cd /root/Langchain-Chatchat && \
+    pip install -e ".[xinference]" -U
 
 
 COPY langchain/langchain.sh       /opt/supervisor/langchain.sh
