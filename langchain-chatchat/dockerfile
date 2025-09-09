@@ -23,8 +23,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /root
 
 
-# 先安装 Xinference
-RUN pip install xinference
 
 
 
