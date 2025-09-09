@@ -1,2 +1,2 @@
 #!/bin/bash
-python startup.py
+chatchat start -a
