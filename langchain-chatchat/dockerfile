@@ -32,5 +32,4 @@ WORKDIR /root
 
 
 
-# 启动 supervisord（前台运行，Docker 要求）
-ENTRYPOINT ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf", "-n"]
+CMD ["/bin/bash"]
