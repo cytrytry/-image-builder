@@ -25,7 +25,7 @@ RUN python -m venv /opt/xinference-env
 
 # 直接使用虚拟环境里的 pip 安装 xinference（不需要 source 激活）
 RUN /opt/xinference-env/bin/pip install --upgrade pip && \
-    /opt/xinference-env/bin/pip install xinference
+    /opt/xinference-env/bin/pip install "xinference[transformers]"
 
 
 # 设置工作目录
