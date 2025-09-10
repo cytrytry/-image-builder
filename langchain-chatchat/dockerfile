@@ -27,4 +27,4 @@ WORKDIR /root
 
 
 
-CMD 
+CMD ["/bin/bash"]
