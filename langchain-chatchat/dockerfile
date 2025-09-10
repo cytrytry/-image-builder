@@ -8,11 +8,6 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
 #    sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' /etc/apt/sources.list
 
-# install supervisord
-RUN apt update -y && apt install -y supervisor && \
-    mkdir -p /var/log/supervisord && \
-    mkdir -p /opt/supervisor && \
-    apt clean 
 
 # 安装系统依赖
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -32,4 +27,4 @@ WORKDIR /root
 
 
 
-CMD ["/bin/bash"]
+CMD 
