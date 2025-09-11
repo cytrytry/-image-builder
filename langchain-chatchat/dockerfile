@@ -31,7 +31,7 @@ RUN /opt/xinference-env/bin/pip install --upgrade pip && \
 COPY xinference/xinference.sh   /opt/supervisor/xinference.sh
 COPY xinference/xinference.conf /etc/supervisor/conf.d/xinference.conf
 
-RUN python -m vene /opt/chat-env
+RUN python -m venv /opt/chat-env
 
 RUN /opt/chat-env/bin/pip install --upgrade pip && \
     /opt/chat-env/bin/pip install "langchain-chatchat[xinference]" -U

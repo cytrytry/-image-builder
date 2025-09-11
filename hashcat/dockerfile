@@ -1,0 +1,20 @@
+FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu22.04
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+RUN apt update -y && apt install -y \
+libbz2-dev \
+libssl-dev \
+libncurses5-dev \
+libffi-dev \
+libreadline-dev \
+libsqlite3-dev \
+liblzma-dev \
+curl \
+
+WORKDIR /root
+
+
+
+
+CMD []
