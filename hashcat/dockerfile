@@ -3,14 +3,14 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 
 RUN apt update -y && apt install -y \
-libbz2-dev \
-libssl-dev \
-libncurses5-dev \
-libffi-dev \
-libreadline-dev \
-libsqlite3-dev \
-liblzma-dev \
-curl \
+    libbz2-dev \
+    libssl-dev \
+    libncurses5-dev \
+    libffi-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    liblzma-dev \
+    curl
 
 WORKDIR /root
 
