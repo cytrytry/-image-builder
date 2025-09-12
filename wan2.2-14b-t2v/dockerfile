@@ -46,6 +46,6 @@ COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
 COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 
 #Copy ltx13b-i2v default workflow
-COPY wan2.2-14b-t2v/video_wan2_2_14B_t2v.json /root/ComfyUI/user/default/workflows/video_wan2_2_14B_t2v.json
+COPY video_wan2_2_14B_t2v.json /root/ComfyUI/user/default/workflows/video_wan2_2_14B_t2v.json
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
