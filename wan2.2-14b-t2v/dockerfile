@@ -40,6 +40,8 @@ RUN cd /root && git clone https://github.com/comfyanonymous/ComfyUI && \
 
 WORKDIR /root/ComfyUI
 
+#Download comfyui-manager
+RUN cd custom_nodes && git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
 
 # Copy comfyui supervisor configuration
 COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
