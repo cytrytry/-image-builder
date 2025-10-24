@@ -13,8 +13,7 @@ RUN apt update -y && apt install -y supervisor && \
 
 # install jupyter
 RUN pip install jupyter && \
-    pip install nvitop && \    
-    pip cache purge   
+    pip install nvitop &&     
 COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
 COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
 
