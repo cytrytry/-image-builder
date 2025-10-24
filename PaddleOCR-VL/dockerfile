@@ -36,8 +36,8 @@ RUN paddlex --get_pipeline_config PaddleOCR-VL
 
 RUN sed -i 's/backend:.*/backend: vllm-server/' PaddleOCR-VL.yaml && sed -i '/backend: vllm-server/a\      server_url: http://127.0.0.1:8118/v1' PaddleOCR-VL.yaml
 
-COPY paddleocr-vl/PaddleOCR-VL.sh   /opt/supervisor/paddleocr-vl.sh
-COPY paddleocr-vl/PaddleOCR-VL.conf /etc/supervisor/conf.d/paddleocr-vl.conf
+COPY paddleocr-vl/paddleocr-vl.sh   /opt/supervisor/paddleocr-vl.sh
+COPY paddleocr-vl/paddleocr-vl.conf /etc/supervisor/conf.d/paddleocr-vl.conf
 
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
