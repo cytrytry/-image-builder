@@ -12,8 +12,8 @@ RUN apt update -y && apt install -y supervisor && \
     apt clean 
 
 # install jupyter
-RUN pip install jupyter && \
-    pip install nvitop &&     
+RUN pip install jupyter nvitop  
+  
 COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
 COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
 
