@@ -33,7 +33,7 @@ RUN pip install https://paddle-whl.bj.bcebos.com/nightly/cu126/safetensors/safet
 # 使用虚拟环境中的 paddlex
 RUN paddlex --install genai-client
 
-RUN paddlex --get_pipeline_config PaddleOCR-VL
+RUN echo "" | paddlex --get_pipeline_config PaddleOCR-VL
 
 # 修改配置文件
 RUN sed -i 's/backend:.*/backend: vllm-server/' PaddleOCR-VL.yaml && \
