@@ -3,16 +3,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 
 
-
-# install jupyter
-RUN pip install jupyter nvitop  
-
-COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
-COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
-
-WORKDIR /root
-# 创建虚拟环境
-
 RUN python -m venv .venv
 # 设置环境变量，让后续命令自动使用虚拟环境
 ENV PATH="/root/.venv/bin:$PATH"
