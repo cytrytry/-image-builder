@@ -18,9 +18,9 @@ COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
 COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
 
 
-# 复制 paddleocr-vl 配置文件
-COPY paddleocr-vl/paddleocr-vl.sh   /opt/supervisor/paddleocr-vl.sh
-COPY paddleocr-vl/paddleocr-vl.conf /etc/supervisor/conf.d/paddleocr-vl.conf
+# 复制 paddleocr 配置文件
+COPY paddleocr/paddleocr.sh   /opt/supervisor/paddleocr.sh
+COPY paddleocr/paddleocr.conf /etc/supervisor/conf.d/paddleocr.conf
 
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
