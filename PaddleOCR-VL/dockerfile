@@ -16,7 +16,7 @@ RUN apt update -y && apt install -y supervisor && \
     apt clean 
 
 # install jupyter
-RUN pip install jupyter nvitop  
+RUN /root/.venv/bin/paddlex --install genai-client  
 
 COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
 COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
