@@ -4,22 +4,22 @@ ENV PYTHONUNBUFFERED=1
 
 # for China
 # RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
-# sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#'/etc/apt/sources.list
+#    sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' /etc/apt/sources.list
 # install supervisord
 RUN apt update -y && apt install -y supervisor && \
     mkdir -p /var/log/supervisord && \
-    mkdir -p /opt/supervisor && \    
-    apt clean 
+    mkdir -p /opt/supervisor && \
+    apt clean
 
 # install jupyter
-RUN pip install jupyter nvitop  
-
+RUN pip install jupyter && \
+    pip install nvitop && \
+    pip cache purge
 COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
 COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
 
 WORKDIR /root
-COPY paddleocr/paddleocr.sh   /opt/supervisor/paddleocr.sh
-COPY paddleocr/paddleocr.conf /etc/supervisor/conf.d/paddleocr.conf
+
 
 RUN python -m venv .venv
 
@@ -39,5 +39,7 @@ RUN echo "" | paddlex --get_pipeline_config PaddleOCR-VL
 RUN sed -i 's/backend:.*/backend: vllm-server/' PaddleOCR-VL.yaml && \
     sed -i '/backend: vllm-server/a\      server_url: http://127.0.0.1:8118/v1' PaddleOCR-VL.yaml
 
+COPY paddleocr/paddleocr.sh         /opt/supervisor/paddleocr.sh
+COPY paddleocr/paddleocr.conf       /etc/supervisor/conf.d/paddleocr.conf
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
