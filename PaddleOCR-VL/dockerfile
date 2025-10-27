@@ -18,9 +18,7 @@ RUN echo_supervisord_conf > /etc/supervisor/supervisord.conf && \
 
 
 # install jupyter
-RUN pip install jupyter && \
-    pip install nvitop && \
-    pip cache purge
+RUN pip install jupyter nvitop
 COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
 COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
 
