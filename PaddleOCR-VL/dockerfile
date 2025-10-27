@@ -9,7 +9,13 @@ ENV PYTHONUNBUFFERED=1
 RUN apt update -y && apt install -y supervisor && \
     mkdir -p /var/log/supervisord && \
     mkdir -p /opt/supervisor && \
+    mkdir -p /etc/supervisor/conf.d && \
     apt clean
+
+RUN echo_supervisord_conf > /etc/supervisor/supervisord.conf && \
+    echo "[include]" >> /etc/supervisor/supervisord.conf && \
+    echo "files = /etc/supervisor/conf.d/*.conf" >> /etc/supervisor/supervisord.conf
+
 
 # install jupyter
 RUN pip install jupyter && \
