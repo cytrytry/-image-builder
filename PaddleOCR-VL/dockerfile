@@ -17,10 +17,27 @@ RUN pip install jupyter nvitop
 COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
 COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
 
-
-# 复制 paddleocr-vl 配置文件
+WORKDIR /root
 COPY paddleocr/paddleocr.sh   /opt/supervisor/paddleocr.sh
 COPY paddleocr/paddleocr.conf /etc/supervisor/conf.d/paddleocr.conf
+
+RUN python -m venv .venv
+
+ENV PATH="/root/.venv/bin:$PATH"
+
+RUN pip install paddlepaddle-gpu==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
+
+RUN pip install -U "paddleocr[doc-parser]"
+
+RUN pip install https://paddle-whl.bj.bcebos.com/nightly/cu126/safetensors/safetensors-0.6.2.dev0-cp38-abi3-linux_x86_64.whl
+
+RUN paddlex --install genai-client
+
+RUN echo "" | paddlex --get_pipeline_config PaddleOCR-VL
+
+
+RUN sed -i 's/backend:.*/backend: vllm-server/' PaddleOCR-VL.yaml && \
+    sed -i '/backend: vllm-server/a\      server_url: http://127.0.0.1:8118/v1' PaddleOCR-VL.yaml
 
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
