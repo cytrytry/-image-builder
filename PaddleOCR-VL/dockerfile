@@ -2,14 +2,7 @@ FROM ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddlex-genai-vllm-server
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 
-# for China
-# RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
-# sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#'/etc/apt/sources.list
-# install supervisord
-RUN apt update -y && apt install -y supervisor && \
-    mkdir -p /var/log/supervisord && \
-    mkdir -p /opt/supervisor && \    
-    apt clean 
+
 
 # install jupyter
 RUN pip install jupyter nvitop  
