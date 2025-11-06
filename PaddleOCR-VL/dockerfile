@@ -1,0 +1,44 @@
+FROM ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddlex-genai-vllm-server:latest
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+
+# for China
+# RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
+# sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#'/etc/apt/sources.list
+# install supervisord
+RUN apt update -y && apt install -y supervisor && \
+    mkdir -p /var/log/supervisord && \
+    mkdir -p /opt/supervisor && \    
+    apt clean 
+
+# install jupyter
+RUN pip install jupyter nvitop  
+
+COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
+COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
+
+WORKDIR /root
+COPY paddleocr/paddleocr.sh   /opt/supervisor/paddleocr.sh
+COPY paddleocr/paddleocr.conf /etc/supervisor/conf.d/paddleocr.conf
+
+RUN python -m venv .venv
+
+ENV PATH="/root/.venv/bin:$PATH"
+
+RUN pip install paddlepaddle-gpu==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
+
+RUN pip install -U "paddleocr[doc-parser]"
+
+RUN pip install https://paddle-whl.bj.bcebos.com/nightly/cu126/safetensors/safetensors-0.6.2.dev0-cp38-abi3-linux_x86_64.whl
+
+RUN paddlex --install genai-client 
+
+RUN echo "" | paddlex --get_pipeline_config PaddleOCR-VL
+
+
+RUN sed -i 's/backend:.*/backend: vllm-server/' PaddleOCR-VL.yaml && \
+    sed -i '/backend: vllm-server/a\      server_url: http://127.0.0.1:8118/v1' PaddleOCR-VL.yaml
+
+
+CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
