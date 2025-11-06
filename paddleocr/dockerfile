@@ -1,0 +1,10 @@
+FROM novitalabs/paddlex-paddleocr-vl-server:v1
+
+USER root
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+USER paddlex
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
