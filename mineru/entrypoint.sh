@@ -83,8 +83,8 @@ else
     
     # --- Wait for VLLM Service to be Ready ---
     log_info "Waiting for mineru-vllm-server to become ready..."
-    local attempts=0
-    local max_attempts=$((HEALTH_CHECK_TIMEOUT / SLEEP_INTERVAL))
+    attempts=0
+    max_attempts=$((HEALTH_CHECK_TIMEOUT / SLEEP_INTERVAL))
     
     while [ $attempts -lt $max_attempts ]; do
         # Check if process is still alive
