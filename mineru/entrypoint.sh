@@ -13,6 +13,13 @@ API_PORT="8000"
 HEALTH_CHECK_TIMEOUT=120  # Health check timeout (seconds)
 SLEEP_INTERVAL=5         # Check interval (seconds)
 
+# --- CUDA/Flash-Attention Configuration ---
+# Disable flash-attention to avoid CUDA errors on non-Hopper GPUs
+# Try multiple environment variables to ensure compatibility
+export VLLM_USE_TRITON_FLASH_ATTENTION=0
+export VLLM_USE_FLASH_ATTENTION=0
+export VLLM_ATTENTION_BACKEND=XFORMERS
+
 # --- Logging Functions ---
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
@@ -77,6 +84,7 @@ else
     log_info "mineru-vllm-server is not running or unhealthy (HTTP $initial_health), starting now..."
     
     # Start mineru-vllm-server (background process)
+    # Disable flash-attention to avoid CUDA errors on non-Hopper GPUs
     mineru-vllm-server --host "$VLLM_HOST" --port "$VLLM_PORT" &
     VLLM_PID=$!
     log_info "mineru-vllm-server started with PID: $VLLM_PID"
