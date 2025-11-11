@@ -1,0 +1,730 @@
+[
+    {
+        "type": "text",
+        "text": "Sample.Cat",
+        "text_level": 1,
+        "bbox": [
+            210,
+            64,
+            591,
+            125
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "English:",
+        "text_level": 1,
+        "bbox": [
+            86,
+            152,
+            183,
+            172
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "4 Do not wear yourself out to get rich;",
+            "Stop and show understanding.",
+            "5 You will fix your eyes on wealth, and it is no more,",
+            "For it will surely sprout wings and fly off to the sky like an eagle."
+        ],
+        "bbox": [
+            86,
+            181,
+            642,
+            258
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Russian:",
+        "text_level": 1,
+        "bbox": [
+            86,
+            280,
+            189,
+            297
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "4 He n3HpyrKe68, yTo6bI pa360raTeTb;",
+            "OCTaHOBnCb I nPoRbN IOHIMaHHe.",
+            "5 Tb6ydeewb CMOTpeTb Ha 60raTCTBO, n ero 60jIbe HeT,",
+            "OHO HnpeMeHHo 06peTeKpbIbIy uIYeTITB He6o, KaK opJ."
+        ],
+        "bbox": [
+            86,
+            306,
+            633,
+            385
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Armenian",
+        "text_level": 1,
+        "bbox": [
+            86,
+            396,
+            183,
+            411
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "4<wnunwuwlnhwwun yu2ugn nnLnuwh:",
+            "Wuq wu L huwuggnnnnpnnu nnuuynnhn:",
+            "5 u wtu hwnnnl jwun, u wju yw,",
+            "Lwuh np putn yunuh u wouh utu nguh tnuhup np"
+        ],
+        "bbox": [
+            86,
+            412,
+            668,
+            484
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Spanish:",
+        "text_level": 1,
+        "bbox": [
+            86,
+            492,
+            189,
+            512
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "4 No te desgastes tratando de hacerte rico;",
+            "Detente y muestra entendimiento.",
+            "5 Fijarás tu vista en las riquezas, y ya no estarán,",
+            "Porque seguramente echaran alas y volarán al cielo como un águila."
+        ],
+        "bbox": [
+            86,
+            520,
+            686,
+            597
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Catalan:",
+        "text_level": 1,
+        "bbox": [
+            86,
+            618,
+            183,
+            636
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "4 No et desgastis intentant fer-teric;",
+            "Atura't i mystra comprensión.",
+            "5 Fixaràs la mirada en la riquesa, i ja no hi sera,",
+            "Perquè segurément farà ales i volarà al cel com una aguila."
+        ],
+        "bbox": [
+            86,
+            645,
+            607,
+            723
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "French:",
+        "text_level": 1,
+        "bbox": [
+            86,
+            744,
+            176,
+            762
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "4 Ne te fatigue pas à pouvoir t'enrichir;",
+        "bbox": [
+            86,
+            771,
+            423,
+            787
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Arrête-toi et fais preuve de compréhension.",
+        "bbox": [
+            86,
+            791,
+            467,
+            808
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "5 Tu fixeras ton regard sur la richesse, et elle ne sera plus,",
+        "bbox": [
+            86,
+            811,
+            601,
+            829
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Car elle prendra surement des ailes et s'envolera dans le ciel comme un aigle.",
+        "bbox": [
+            86,
+            830,
+            769,
+            849
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "#",
+        "bbox": [
+            91,
+            47,
+            192,
+            133
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "German:",
+        "text_level": 1,
+        "bbox": [
+            89,
+            71,
+            186,
+            89
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "4 Strenge dich nicht an, um reich zu werden;",
+        "bbox": [
+            86,
+            98,
+            480,
+            114
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "HalteinneundzeigeVerstandnis.",
+        "bbox": [
+            86,
+            118,
+            383,
+            136
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5 Du wirst deinen Blick auf den Reichtum richten, und er wird nicht mehr da sein,",
+        "bbox": [
+            86,
+            138,
+            790,
+            155
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Denn er wird sich Flügel machen und wie ein Adler in den Himmel fliegen.",
+        "bbox": [
+            86,
+            157,
+            730,
+            176
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Chinese (Simplified):",
+        "text_level": 1,
+        "bbox": [
+            86,
+            196,
+            318,
+            218
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "4 不要竭力追求财富；",
+        "bbox": [
+            86,
+            224,
+            254,
+            241
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "停下来，表现出理解。",
+        "bbox": [
+            88,
+            243,
+            253,
+            258
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5 你注视财富时，它却不在了，",
+        "bbox": [
+            86,
+            262,
+            321,
+            277
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "因为它必定会长出翅膀，像鹰一样飞向天空。",
+        "bbox": [
+            86,
+            280,
+            424,
+            297
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Hindi:",
+        "text_level": 1,
+        "bbox": [
+            88,
+            316,
+            156,
+            335
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "4 Aamir Bannne ke lilru k o mtl a",
+        "bbox": [
+            86,
+            343,
+            377,
+            362
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "克JAZAOTI 一和R SsMgDdavri d",
+        "bbox": [
+            86,
+            364,
+            328,
+            381
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5LeuM sAepatiPpar NajrTefekaaOge, Aor vah nhi rhegoi",
+        "bbox": [
+            86,
+            383,
+            441,
+            402
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Kayoikvahnirichelr kup rse pokl aokarov chilk kci tahrh Aakaij",
+        "bbox": [
+            86,
+            402,
+            601,
+            422
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Portuguese:",
+        "text_level": 1,
+        "bbox": [
+            88,
+            444,
+            225,
+            463
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "4 Nao te esgotes para enriqueecer;",
+        "bbox": [
+            86,
+            470,
+            388,
+            488
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Pare e mostre entendimento.",
+        "bbox": [
+            86,
+            491,
+            344,
+            506
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5 Fixarás os olhos na riqueza, e ela não está,",
+        "bbox": [
+            86,
+            510,
+            524,
+            527
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Pois ela certamente criar asas e voar para o céu como uma águia.",
+        "bbox": [
+            86,
+            530,
+            689,
+            547
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Japanese:",
+        "text_level": 1,
+        "bbox": [
+            88,
+            569,
+            204,
+            589
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "4富得的たに自分を酷使ないてくだせ。",
+        "bbox": [
+            86,
+            595,
+            459,
+            612
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "立方止馬、理解を示てくさい。",
+        "bbox": [
+            86,
+            614,
+            372,
+            630
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5富丶目丶向丶或丶、它丶是丶也丶",
+        "bbox": [
+            86,
+            633,
+            439,
+            650
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "它是必絶翼を生やて、フシのように空に飛む去り。",
+        "bbox": [
+            86,
+            652,
+            542,
+            667
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Korean:",
+        "text_level": 1,
+        "bbox": [
+            88,
+            689,
+            179,
+            708
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "4. 资者会 2018 年 12 月 31 日",
+        "bbox": [
+            86,
+            715,
+            349,
+            733
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "$\\text{男}$  拜  $\\ddot{\\mathcal{O}}$  且  $\\dot{\\mathcal{O}}$  品  $\\dot{\\mathcal{O}}$  品  $\\dot{\\mathcal{O}}$  品  $\\dot{\\mathcal{O}}$  品  $\\dot{\\mathcal{O}}$  品  $\\dot{\\mathcal{O}}$  品  $\\dot{\\mathcal{O}}$  品  $\\dot{\\mathcal{O}}$  品  $1000$",
+        "bbox": [
+            86,
+            737,
+            279,
+            753
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5 当心在本部的书，其就是",
+        "bbox": [
+            86,
+            756,
+            449,
+            773
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "这就是反德尼卡的“反德”问题。",
+        "bbox": [
+            86,
+            776,
+            540,
+            792
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Italian:",
+        "text_level": 1,
+        "bbox": [
+            88,
+            815,
+            166,
+            832
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "4 Non affaticarti per diventare ricco;",
+        "bbox": [
+            86,
+            842,
+            401,
+            859
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Fermati e miastra comprenzione.",
+        "bbox": [
+            86,
+            862,
+            374,
+            878
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5 Fisserai lo sguardo sulla ricchezza, e non ci sare più,",
+        "bbox": [
+            86,
+            882,
+            568,
+            900
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Perché sicuramente prenderà le ali e volerà verso il cielo come un'aquila.",
+        "bbox": [
+            86,
+            902,
+            725,
+            920
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Turkish:",
+        "text_level": 1,
+        "bbox": [
+            89,
+            71,
+            181,
+            90
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "4 Zengin olmak icin kendini yorma;",
+        "bbox": [
+            89,
+            98,
+            393,
+            116
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Dur ve anlayis goster.",
+        "bbox": [
+            89,
+            118,
+            281,
+            136
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "5 Zenginlige gozlerini dikeceksin, ama artik olmayacak,",
+        "bbox": [
+            88,
+            138,
+            571,
+            156
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Çünkü kesinlikle kanatlanıp kartal gibi gókyüzune uzacaktı.",
+        "bbox": [
+            88,
+            159,
+            607,
+            176
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Vietnamese:",
+        "text_level": 1,
+        "bbox": [
+            88,
+            196,
+            227,
+            215
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "4 Dung tu lam khô minh de tro nên giàu có;",
+        "bbox": [
+            88,
+            223,
+            475,
+            243
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Hãy dûng lái vâ theiên sú hieu biét.",
+        "bbox": [
+            88,
+            244,
+            416,
+            262
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "5 Ban sē nhìn vào su r giàu có, và né khòng cò nǔrā,",
+        "bbox": [
+            88,
+            263,
+            547,
+            282
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Vi chac chan no sé moc canh va bay len troi nhur dai bang.",
+        "bbox": [
+            88,
+            284,
+            604,
+            303
+        ],
+        "page_idx": 2
+    }
+]

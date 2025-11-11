@@ -29,7 +29,13 @@ RUN python3 -m pip install -U 'mineru[core]' -i https://mirrors.aliyun.com/pypi/
 # Download models and update the configuration file
 RUN /bin/bash -c "mineru-models-download -s modelscope -m all"
 
-COPY entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh
+# Pre-download vLLM model: Qwen/Qwen3-0.6B
+# Model source: https://huggingface.co/Qwen/Qwen3-0.6B
+# This speeds up container startup by avoiding model download during runtime
+# vLLM will use the cached model from ~/.cache/huggingface/hub/
+RUN python3 -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='Qwen/Qwen3-0.6B', cache_dir='/root/.cache/huggingface')" || \
+    echo "Warning: Model pre-download failed, will download at runtime"
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
+
+ENTRYPOINT []

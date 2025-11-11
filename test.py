@@ -17,7 +17,6 @@ from mineru.backend.pipeline.model_json_to_middle_json import result_to_middle_j
 from mineru.backend.vlm.vlm_middle_json_mkcontent import union_make as vlm_union_make
 from mineru.utils.guess_suffix_or_lang import guess_suffix_by_path
 
-
 def do_parse(
     output_dir,  # Output directory for storing parsing results
     pdf_file_names: list[str],  # List of PDF file names to be parsed
@@ -90,7 +89,6 @@ def do_parse(
                 f_make_md_mode, middle_json, infer_result, is_pipeline=False
             )
 
-
 def _process_output(
         pdf_info,
         pdf_bytes,
@@ -155,14 +153,13 @@ def _process_output(
 
     logger.info(f"local output dir is {local_md_dir}")
 
-
 def parse_doc(
         path_list: list[Path],
         output_dir,
         lang="ch",
         backend="vlm-http-client",
         method="auto",
-        server_url="https://5594a04fe271f9ae-30000.us-dallas-nas-2.gpu-instance.novita.ai",
+        server_url="https://a514323a4b34cbc0-8000.us-ca-nas-2.gpu-instance.novita.ai",
         start_page_id=0,
         end_page_id=None
 ):
@@ -213,7 +210,6 @@ def parse_doc(
     except Exception as e:
         logger.exception(e)
 
-
 if __name__ == '__main__':
     # args
     __dir__ = os.path.dirname(os.path.abspath(__file__))
@@ -237,4 +233,4 @@ if __name__ == '__main__':
     # parse_doc(doc_path_list, output_dir, backend="vlm-transformers")  # more general.
     # parse_doc(doc_path_list, output_dir, backend="vlm-mlx-engine")  # faster than transformers in macOS 13.5+.
     # parse_doc(doc_path_list, output_dir, backend="vlm-vllm-engine")  # faster(engine).
-    # parse_doc(doc_path_list, output_dir, backend="vlm-http-client", server_url="http://127.0.0.1:30000")  # faster(client).
+    parse_doc(doc_path_list, output_dir, backend="vlm-http-client", server_url="https://a514323a4b34cbc0-8000.us-ca-nas-2.gpu-instance.novita.ai")  # faster(client).
