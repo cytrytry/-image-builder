@@ -29,7 +29,4 @@ RUN python3 -m pip install -U 'mineru[core]' -i https://mirrors.aliyun.com/pypi/
 # Download models and update the configuration file
 RUN /bin/bash -c "mineru-models-download -s modelscope -m all"
 
-COPY entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT []

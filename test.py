@@ -162,7 +162,7 @@ def parse_doc(
         lang="ch",
         backend="vlm-http-client",
         method="auto",
-        server_url="https://c093edde8eda767f-30000.us-dallas-nas-2.gpu-instance.novita.ai",
+        server_url="https://5594a04fe271f9ae-30000.us-dallas-nas-2.gpu-instance.novita.ai",
         start_page_id=0,
         end_page_id=None
 ):

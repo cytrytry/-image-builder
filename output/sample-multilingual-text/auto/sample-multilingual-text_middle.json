@@ -1,0 +1,4390 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        130,
+                        50,
+                        361,
+                        97
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                124,
+                                44,
+                                368,
+                                102
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        124,
+                                        44,
+                                        368,
+                                        102
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Sample.Cat",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0.5,
+                    "virtual_lines": [
+                        {
+                            "bbox": [
+                                130,
+                                50,
+                                361,
+                                73.5
+                            ],
+                            "spans": [],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                130,
+                                73.5,
+                                361,
+                                97.0
+                            ],
+                            "spans": [],
+                            "index": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        122,
+                        111,
+                        138
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                120,
+                                115,
+                                140
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        120,
+                                        115,
+                                        140
+                                    ],
+                                    "score": 1.0,
+                                    "content": "English:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        56,
+                        144,
+                        394,
+                        206
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                143,
+                                257,
+                                160
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        143,
+                                        257,
+                                        160
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Do not wear yourself out to get rich;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                159,
+                                219,
+                                175
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        159,
+                                        219,
+                                        175
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Stop and show understanding.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                174,
+                                331,
+                                191
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        174,
+                                        331,
+                                        191
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 You will fix your eyes on wealth, and it is no more,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                190,
+                                393,
+                                207
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        190,
+                                        393,
+                                        207
+                                    ],
+                                    "score": 1.0,
+                                    "content": "For it will surely sprout wings and fly off to the sky like an eagle.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        }
+                    ],
+                    "index": 4.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        222,
+                        115,
+                        237
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                221,
+                                118,
+                                239
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        221,
+                                        118,
+                                        239
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Russian:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        56,
+                        243,
+                        389,
+                        305
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                242,
+                                273,
+                                260
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        242,
+                                        273,
+                                        260
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Не изнуряй себя, чтобы разбогатеть;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                259,
+                                244,
+                                275
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        259,
+                                        244,
+                                        275
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Остановись и прояви понимание.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                275,
+                                361,
+                                291
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        275,
+                                        361,
+                                        291
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Ты будешь смотреть на богатство, и его больше нет,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 10
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                291,
+                                389,
+                                306
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        291,
+                                        389,
+                                        306
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Оно непременно обретет крылья и улетит в небо, как орёл.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "index": 9.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        315,
+                        113,
+                        326
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                314,
+                                113,
+                                328
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        314,
+                                        113,
+                                        328
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Armenian",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 12
+                        }
+                    ],
+                    "index": 12
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        56,
+                        328,
+                        411,
+                        384
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                57,
+                                326,
+                                365,
+                                344
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        57,
+                                        326,
+                                        365,
+                                        344
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4  : Հարստանալու համար կաշվիցդ դուրս մի արի",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 13
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                340,
+                                318,
+                                358
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        340,
+                                        318,
+                                        358
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Կանգ առ և հասկացողություն դրսևորիր :",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 14
+                        },
+                        {
+                            "bbox": [
+                                56,
+                                353,
+                                292,
+                                371
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        56,
+                                        353,
+                                        292,
+                                        371
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5  , , Կնայես հարստությանը և այն չկա",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 15
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                367,
+                                410,
+                                386
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        367,
+                                        410,
+                                        386
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Քանի որ թևեր կառնի և արծվի պես դեպի երկինք կթռչի",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 16
+                        }
+                    ],
+                    "index": 14.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        390,
+                        115,
+                        406
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                389,
+                                118,
+                                408
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        389,
+                                        118,
+                                        408
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Spanish:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 17
+                        }
+                    ],
+                    "index": 17
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        56,
+                        412,
+                        422,
+                        474
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                412,
+                                288,
+                                427
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        412,
+                                        83,
+                                        425
+                                    ],
+                                    "score": 0.31,
+                                    "content": "4 \\ N 0",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        83,
+                                        412,
+                                        288,
+                                        427
+                                    ],
+                                    "score": 1.0,
+                                    "content": "te desgastes tratando de hacerte rico;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 18
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                427,
+                                237,
+                                443
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        427,
+                                        237,
+                                        443
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Detente y muestra entendimiento.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 19
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                443,
+                                321,
+                                459
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        443,
+                                        321,
+                                        459
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Fijarás tu vista en las riquezas, y ya no estarán,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 20
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                459,
+                                422,
+                                475
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        459,
+                                        422,
+                                        475
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Porque seguramente echarán alas y volarán al cielo como un águila.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 21
+                        }
+                    ],
+                    "index": 19.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        55,
+                        490,
+                        111,
+                        505
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                488,
+                                114,
+                                507
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        488,
+                                        114,
+                                        507
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Catalan:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 22
+                        }
+                    ],
+                    "index": 22
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        511,
+                        374,
+                        573
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                510,
+                                250,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        510,
+                                        250,
+                                        527
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 No et desgastis intentant fer-te ric;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 23
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                527,
+                                206,
+                                542
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        527,
+                                        206,
+                                        542
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Atura’t i mostra comprensió.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 24
+                        },
+                        {
+                            "bbox": [
+                                53,
+                                541,
+                                313,
+                                559
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        541,
+                                        313,
+                                        559
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Fixaràs la mirada en la riquesa, i ja no hi serà,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 25
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                558,
+                                374,
+                                575
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        558,
+                                        374,
+                                        575
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Perquè segurament farà ales i volarà al cel com una àguila.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 26
+                        }
+                    ],
+                    "index": 24.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        590,
+                        108,
+                        604
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                588,
+                                110,
+                                606
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        588,
+                                        110,
+                                        606
+                                    ],
+                                    "score": 1.0,
+                                    "content": "French:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 27
+                        }
+                    ],
+                    "index": 27
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        611,
+                        474,
+                        673
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                612,
+                                258,
+                                625
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        612,
+                                        258,
+                                        625
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Ne te fatigue pas à vouloir t’enrichir;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 28
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                627,
+                                287,
+                                641
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        627,
+                                        287,
+                                        641
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Arrête-toi et fais preuve de compréhension.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 29
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                642,
+                                368,
+                                658
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        642,
+                                        368,
+                                        658
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Tu fixeras ton regard sur la richesse, et elle ne sera plus,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 30
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                657,
+                                473,
+                                675
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        657,
+                                        473,
+                                        675
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Car elle prendra sûrement des ailes et s’envolera dans le ciel comme un aigle.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 31
+                        }
+                    ],
+                    "index": 29.5
+                }
+            ],
+            "page_idx": 0,
+            "page_size": [
+                612,
+                792
+            ],
+            "discarded_blocks": [
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        57,
+                        38,
+                        118,
+                        105
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                33,
+                                123,
+                                112
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        33,
+                                        123,
+                                        112
+                                    ],
+                                    "score": 0.0,
+                                    "content": "",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        130,
+                        50,
+                        361,
+                        97
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                124,
+                                44,
+                                368,
+                                102
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        124,
+                                        44,
+                                        368,
+                                        102
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Sample.Cat",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0.5,
+                    "virtual_lines": [
+                        {
+                            "bbox": [
+                                130,
+                                50,
+                                361,
+                                73.5
+                            ],
+                            "spans": [],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                130,
+                                73.5,
+                                361,
+                                97.0
+                            ],
+                            "spans": [],
+                            "index": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        122,
+                        111,
+                        138
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                120,
+                                115,
+                                140
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        120,
+                                        115,
+                                        140
+                                    ],
+                                    "score": 1.0,
+                                    "content": "English:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        56,
+                        144,
+                        394,
+                        206
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                143,
+                                257,
+                                160
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        143,
+                                        257,
+                                        160
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Do not wear yourself out to get rich;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                159,
+                                219,
+                                175
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        159,
+                                        219,
+                                        175
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Stop and show understanding.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                174,
+                                331,
+                                191
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        174,
+                                        331,
+                                        191
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 You will fix your eyes on wealth, and it is no more,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                190,
+                                393,
+                                207
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        190,
+                                        393,
+                                        207
+                                    ],
+                                    "score": 1.0,
+                                    "content": "For it will surely sprout wings and fly off to the sky like an eagle.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 4.5,
+                    "bbox_fs": [
+                        54,
+                        143,
+                        393,
+                        207
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        222,
+                        115,
+                        237
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                221,
+                                118,
+                                239
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        221,
+                                        118,
+                                        239
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Russian:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        56,
+                        243,
+                        389,
+                        305
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                242,
+                                273,
+                                260
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        242,
+                                        273,
+                                        260
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Не изнуряй себя, чтобы разбогатеть;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                259,
+                                244,
+                                275
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        259,
+                                        244,
+                                        275
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Остановись и прояви понимание.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                275,
+                                361,
+                                291
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        275,
+                                        361,
+                                        291
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Ты будешь смотреть на богатство, и его больше нет,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 10,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                291,
+                                389,
+                                306
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        291,
+                                        389,
+                                        306
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Оно непременно обретет крылья и улетит в небо, как орёл.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "index": 9.5,
+                    "bbox_fs": [
+                        53,
+                        242,
+                        389,
+                        306
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        315,
+                        113,
+                        326
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                314,
+                                113,
+                                328
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        314,
+                                        113,
+                                        328
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Armenian",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 12
+                        }
+                    ],
+                    "index": 12
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        56,
+                        328,
+                        411,
+                        384
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                57,
+                                326,
+                                365,
+                                344
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        57,
+                                        326,
+                                        365,
+                                        344
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4  : Հարստանալու համար կաշվիցդ դուրս մի արի",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 13
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                340,
+                                318,
+                                358
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        340,
+                                        318,
+                                        358
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Կանգ առ և հասկացողություն դրսևորիր :",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 14
+                        },
+                        {
+                            "bbox": [
+                                56,
+                                353,
+                                292,
+                                371
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        56,
+                                        353,
+                                        292,
+                                        371
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5  , , Կնայես հարստությանը և այն չկա",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 15
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                367,
+                                410,
+                                386
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        367,
+                                        410,
+                                        386
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Քանի որ թևեր կառնի և արծվի պես դեպի երկինք կթռչի",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 16
+                        }
+                    ],
+                    "index": 14.5,
+                    "bbox_fs": [
+                        54,
+                        326,
+                        410,
+                        386
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        390,
+                        115,
+                        406
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                389,
+                                118,
+                                408
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        389,
+                                        118,
+                                        408
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Spanish:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 17
+                        }
+                    ],
+                    "index": 17
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        56,
+                        412,
+                        422,
+                        474
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                412,
+                                288,
+                                427
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        412,
+                                        83,
+                                        425
+                                    ],
+                                    "score": 0.31,
+                                    "content": "4 \\ N 0",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        83,
+                                        412,
+                                        288,
+                                        427
+                                    ],
+                                    "score": 1.0,
+                                    "content": "te desgastes tratando de hacerte rico;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 18,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                427,
+                                237,
+                                443
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        427,
+                                        237,
+                                        443
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Detente y muestra entendimiento.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 19,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                443,
+                                321,
+                                459
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        443,
+                                        321,
+                                        459
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Fijarás tu vista en las riquezas, y ya no estarán,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 20,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                459,
+                                422,
+                                475
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        459,
+                                        422,
+                                        475
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Porque seguramente echarán alas y volarán al cielo como un águila.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 21,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 19.5,
+                    "bbox_fs": [
+                        54,
+                        412,
+                        422,
+                        475
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        55,
+                        490,
+                        111,
+                        505
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                488,
+                                114,
+                                507
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        488,
+                                        114,
+                                        507
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Catalan:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 22
+                        }
+                    ],
+                    "index": 22
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        55,
+                        511,
+                        374,
+                        573
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                510,
+                                250,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        510,
+                                        250,
+                                        527
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 No et desgastis intentant fer-te ric;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 23,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                527,
+                                206,
+                                542
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        527,
+                                        206,
+                                        542
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Atura’t i mostra comprensió.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 24,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                53,
+                                541,
+                                313,
+                                559
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        541,
+                                        313,
+                                        559
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Fixaràs la mirada en la riquesa, i ja no hi serà,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 25,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                558,
+                                374,
+                                575
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        558,
+                                        374,
+                                        575
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Perquè segurament farà ales i volarà al cel com una àguila.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 26,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 24.5,
+                    "bbox_fs": [
+                        53,
+                        510,
+                        374,
+                        575
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        590,
+                        108,
+                        604
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                588,
+                                110,
+                                606
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        588,
+                                        110,
+                                        606
+                                    ],
+                                    "score": 1.0,
+                                    "content": "French:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 27
+                        }
+                    ],
+                    "index": 27
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        55,
+                        611,
+                        474,
+                        673
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                612,
+                                258,
+                                625
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        612,
+                                        258,
+                                        625
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Ne te fatigue pas à vouloir t’enrichir;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 28,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                627,
+                                287,
+                                641
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        627,
+                                        287,
+                                        641
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Arrête-toi et fais preuve de compréhension.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 29,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                642,
+                                368,
+                                658
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        642,
+                                        368,
+                                        658
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Tu fixeras ton regard sur la richesse, et elle ne sera plus,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 30,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                657,
+                                473,
+                                675
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        657,
+                                        473,
+                                        675
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Car elle prendra sûrement des ailes et s’envolera dans le ciel comme un aigle.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 31,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 29.5,
+                    "bbox_fs": [
+                        54,
+                        612,
+                        473,
+                        675
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        55,
+                        57,
+                        114,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                56,
+                                116,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        56,
+                                        116,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "German:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        56,
+                        78,
+                        487,
+                        140
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                78,
+                                295,
+                                93
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        78,
+                                        295,
+                                        93
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Strenge dich nicht an, um reich zu werden;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                95,
+                                235,
+                                108
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        95,
+                                        235,
+                                        108
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Halte inne und zeige Verständnis.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                110,
+                                487,
+                                124
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        110,
+                                        487,
+                                        124
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Du wirst deinen Blick auf den Reichtum richten, und er wird nicht mehr da sein,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                126,
+                                447,
+                                141
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        126,
+                                        447,
+                                        141
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Denn er wird sich Flügel machen und wie ein Adler in den Himmel fliegen.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        156,
+                        195,
+                        173
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                154,
+                                198,
+                                176
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        154,
+                                        198,
+                                        176
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Chinese (Simplified):",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        178,
+                        261,
+                        236
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                178,
+                                158,
+                                192
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        178,
+                                        158,
+                                        192
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 不要竭力追求财富；",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                192,
+                                157,
+                                207
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        192,
+                                        157,
+                                        207
+                                    ],
+                                    "score": 1.0,
+                                    "content": "停下来，表现出理解。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                209,
+                                198,
+                                221
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        209,
+                                        198,
+                                        221
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 你注视财富时，它却不在了，",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8
+                        },
+                        {
+                            "bbox": [
+                                56,
+                                223,
+                                261,
+                                236
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        56,
+                                        223,
+                                        261,
+                                        236
+                                    ],
+                                    "score": 1.0,
+                                    "content": "因为它必定会长出翅膀，像鹰一样飞向天空。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 7.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        55,
+                        252,
+                        96,
+                        267
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                252,
+                                97,
+                                269
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        252,
+                                        97,
+                                        269
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Hindi:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        272,
+                        369,
+                        335
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                271,
+                                232,
+                                287
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        271,
+                                        232,
+                                        287
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 अमीर बनने के लि\nए खद को मत थकाओु ;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 11
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                288,
+                                202,
+                                303
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        288,
+                                        202,
+                                        303
+                                    ],
+                                    "score": 1.0,
+                                    "content": "रुक जाओ और समझदारी दि खाओ।",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 12
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                304,
+                                271,
+                                318
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        304,
+                                        271,
+                                        318
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 तम संपु त्ति पर नजर लि\u001dकाओगे, और वह नही ं रहेगी,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 13
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                318,
+                                370,
+                                336
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        318,
+                                        370,
+                                        336
+                                    ],
+                                    "score": 1.0,
+                                    "content": "क्योकिं वह नि श्चि त रूप से पंख \nगाकर $ी\n की तरह आकाश में उड़ जाएगी।",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 14
+                        }
+                    ],
+                    "index": 12.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        352,
+                        138,
+                        367
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                350,
+                                140,
+                                371
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        350,
+                                        140,
+                                        371
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Portuguese:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 15
+                        }
+                    ],
+                    "index": 15
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        56,
+                        374,
+                        424,
+                        435
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                372,
+                                239,
+                                389
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        372,
+                                        239,
+                                        389
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Não te esgotes para enriquecer;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 16
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                389,
+                                212,
+                                403
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        389,
+                                        212,
+                                        403
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Pare e mostre entendimento.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 17
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                404,
+                                322,
+                                419
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        404,
+                                        322,
+                                        419
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Fixarás os olhos na riqueza, e ela já não estará,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 18
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                420,
+                                424,
+                                436
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        420,
+                                        424,
+                                        436
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Pois ela certamente criará asas e voará para o céu como uma águia.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 19
+                        }
+                    ],
+                    "index": 17.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        451,
+                        124,
+                        466
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                450,
+                                127,
+                                469
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        450,
+                                        127,
+                                        469
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Japanese:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 20
+                        }
+                    ],
+                    "index": 20
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        473,
+                        333,
+                        530
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                472,
+                                281,
+                                487
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        472,
+                                        281,
+                                        487
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 富を得るために自分を酷使しないでください。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 21
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                487,
+                                229,
+                                501
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        487,
+                                        229,
+                                        501
+                                    ],
+                                    "score": 1.0,
+                                    "content": "立ち止まり、理解を示してください。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 22
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                502,
+                                270,
+                                517
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        502,
+                                        270,
+                                        517
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 富に目を向けると、それはもうありません。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 23
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                516,
+                                333,
+                                531
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        516,
+                                        333,
+                                        531
+                                    ],
+                                    "score": 1.0,
+                                    "content": "それは必ず翼を生やして、ワシのように空に飛び去ります。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 24
+                        }
+                    ],
+                    "index": 22.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        547,
+                        109,
+                        561
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                545,
+                                111,
+                                563
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        545,
+                                        111,
+                                        563
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Korean:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 25
+                        }
+                    ],
+                    "index": 25
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        568,
+                        332,
+                        629
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                568,
+                                215,
+                                582
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        568,
+                                        215,
+                                        582
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 부자가 되려고 무리하지 마십시오 ;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 26
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                583,
+                                173,
+                                597
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        583,
+                                        173,
+                                        597
+                                    ],
+                                    "score": 1.0,
+                                    "content": "멈추고 이해심을 보이세요 .",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 27
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                600,
+                                276,
+                                613
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        600,
+                                        276,
+                                        613
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 당신이 부를 바라보면 , 그것은 더 이상 없습니다 ,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 28
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                616,
+                                332,
+                                629
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        616,
+                                        332,
+                                        629
+                                    ],
+                                    "score": 1.0,
+                                    "content": "그것은 반드시 날개를 달고 독수리처럼 하늘로 날아갈 것입니다 .",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 29
+                        }
+                    ],
+                    "index": 27.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        646,
+                        101,
+                        660
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                644,
+                                104,
+                                663
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        644,
+                                        104,
+                                        663
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Italian:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 30
+                        }
+                    ],
+                    "index": 30
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        668,
+                        446,
+                        729
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                665,
+                                248,
+                                684
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        665,
+                                        248,
+                                        684
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Non affaticarti per diventare ricco;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 31
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                682,
+                                231,
+                                699
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        682,
+                                        231,
+                                        699
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Fermati e mostra comprensione.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 32
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                698,
+                                349,
+                                714
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        698,
+                                        349,
+                                        714
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Fisserai lo sguardo sulla ricchezza, e non ci sarà più,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 33
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                713,
+                                446,
+                                731
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        713,
+                                        446,
+                                        731
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Perché sicuramente prenderà le ali e volerà verso il cielo come un’aquila.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 34
+                        }
+                    ],
+                    "index": 32.5
+                }
+            ],
+            "page_idx": 1,
+            "page_size": [
+                612,
+                792
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        55,
+                        57,
+                        114,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                56,
+                                116,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        56,
+                                        116,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "German:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        56,
+                        78,
+                        487,
+                        140
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                78,
+                                295,
+                                93
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        78,
+                                        295,
+                                        93
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Strenge dich nicht an, um reich zu werden;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                95,
+                                235,
+                                108
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        95,
+                                        235,
+                                        108
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Halte inne und zeige Verständnis.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                110,
+                                487,
+                                124
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        110,
+                                        487,
+                                        124
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Du wirst deinen Blick auf den Reichtum richten, und er wird nicht mehr da sein,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                126,
+                                447,
+                                141
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        126,
+                                        447,
+                                        141
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Denn er wird sich Flügel machen und wie ein Adler in den Himmel fliegen.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5,
+                    "bbox_fs": [
+                        53,
+                        78,
+                        487,
+                        141
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        156,
+                        195,
+                        173
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                154,
+                                198,
+                                176
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        154,
+                                        198,
+                                        176
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Chinese (Simplified):",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        55,
+                        178,
+                        261,
+                        236
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                178,
+                                158,
+                                192
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        178,
+                                        158,
+                                        192
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 不要竭力追求财富；",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                192,
+                                157,
+                                207
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        192,
+                                        157,
+                                        207
+                                    ],
+                                    "score": 1.0,
+                                    "content": "停下来，表现出理解。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                209,
+                                198,
+                                221
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        209,
+                                        198,
+                                        221
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 你注视财富时，它却不在了，",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                56,
+                                223,
+                                261,
+                                236
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        56,
+                                        223,
+                                        261,
+                                        236
+                                    ],
+                                    "score": 1.0,
+                                    "content": "因为它必定会长出翅膀，像鹰一样飞向天空。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 7.5,
+                    "bbox_fs": [
+                        54,
+                        178,
+                        261,
+                        236
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        55,
+                        252,
+                        96,
+                        267
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                252,
+                                97,
+                                269
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        252,
+                                        97,
+                                        269
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Hindi:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        55,
+                        272,
+                        369,
+                        335
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                271,
+                                232,
+                                287
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        271,
+                                        232,
+                                        287
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 अमीर बनने के लि\nए खद को मत थकाओु ;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 11,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                288,
+                                202,
+                                303
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        288,
+                                        202,
+                                        303
+                                    ],
+                                    "score": 1.0,
+                                    "content": "रुक जाओ और समझदारी दि खाओ।",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 12,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                304,
+                                271,
+                                318
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        304,
+                                        271,
+                                        318
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 तम संपु त्ति पर नजर लि\u001dकाओगे, और वह नही ं रहेगी,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 13,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                318,
+                                370,
+                                336
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        318,
+                                        370,
+                                        336
+                                    ],
+                                    "score": 1.0,
+                                    "content": "क्योकिं वह नि श्चि त रूप से पंख \nगाकर $ी\n की तरह आकाश में उड़ जाएगी।",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 14,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 12.5,
+                    "bbox_fs": [
+                        54,
+                        271,
+                        370,
+                        336
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        352,
+                        138,
+                        367
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                350,
+                                140,
+                                371
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        350,
+                                        140,
+                                        371
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Portuguese:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 15
+                        }
+                    ],
+                    "index": 15
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        56,
+                        374,
+                        424,
+                        435
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                372,
+                                239,
+                                389
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        372,
+                                        239,
+                                        389
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Não te esgotes para enriquecer;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 16,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                389,
+                                212,
+                                403
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        389,
+                                        212,
+                                        403
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Pare e mostre entendimento.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 17,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                404,
+                                322,
+                                419
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        404,
+                                        322,
+                                        419
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Fixarás os olhos na riqueza, e ela já não estará,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 18,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                420,
+                                424,
+                                436
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        420,
+                                        424,
+                                        436
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Pois ela certamente criará asas e voará para o céu como uma águia.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 19,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 17.5,
+                    "bbox_fs": [
+                        54,
+                        372,
+                        424,
+                        436
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        451,
+                        124,
+                        466
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                450,
+                                127,
+                                469
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        450,
+                                        127,
+                                        469
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Japanese:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 20
+                        }
+                    ],
+                    "index": 20
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        55,
+                        473,
+                        333,
+                        530
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                472,
+                                281,
+                                487
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        472,
+                                        281,
+                                        487
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 富を得るために自分を酷使しないでください。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 21,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                487,
+                                229,
+                                501
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        487,
+                                        229,
+                                        501
+                                    ],
+                                    "score": 1.0,
+                                    "content": "立ち止まり、理解を示してください。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 22,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                502,
+                                270,
+                                517
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        502,
+                                        270,
+                                        517
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 富に目を向けると、それはもうありません。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 23,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                516,
+                                333,
+                                531
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        516,
+                                        333,
+                                        531
+                                    ],
+                                    "score": 1.0,
+                                    "content": "それは必ず翼を生やして、ワシのように空に飛び去ります。",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 24,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        }
+                    ],
+                    "index": 22.5,
+                    "bbox_fs": [
+                        54,
+                        472,
+                        333,
+                        531
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        547,
+                        109,
+                        561
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                545,
+                                111,
+                                563
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        545,
+                                        111,
+                                        563
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Korean:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 25
+                        }
+                    ],
+                    "index": 25
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        55,
+                        568,
+                        332,
+                        629
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                568,
+                                215,
+                                582
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        568,
+                                        215,
+                                        582
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 부자가 되려고 무리하지 마십시오 ;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 26,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                583,
+                                173,
+                                597
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        583,
+                                        173,
+                                        597
+                                    ],
+                                    "score": 1.0,
+                                    "content": "멈추고 이해심을 보이세요 .",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 27,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                600,
+                                276,
+                                613
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        600,
+                                        276,
+                                        613
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 당신이 부를 바라보면 , 그것은 더 이상 없습니다 ,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 28,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                616,
+                                332,
+                                629
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        616,
+                                        332,
+                                        629
+                                    ],
+                                    "score": 1.0,
+                                    "content": "그것은 반드시 날개를 달고 독수리처럼 하늘로 날아갈 것입니다 .",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 29,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 27.5,
+                    "bbox_fs": [
+                        54,
+                        568,
+                        332,
+                        629
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        646,
+                        101,
+                        660
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                644,
+                                104,
+                                663
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        644,
+                                        104,
+                                        663
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Italian:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 30
+                        }
+                    ],
+                    "index": 30
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        55,
+                        668,
+                        446,
+                        729
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                665,
+                                248,
+                                684
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        665,
+                                        248,
+                                        684
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Non affaticarti per diventare ricco;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 31,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                682,
+                                231,
+                                699
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        682,
+                                        231,
+                                        699
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Fermati e mostra comprensione.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 32,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                698,
+                                349,
+                                714
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        698,
+                                        349,
+                                        714
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Fisserai lo sguardo sulla ricchezza, e non ci sarà più,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 33,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                713,
+                                446,
+                                731
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        713,
+                                        446,
+                                        731
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Perché sicuramente prenderà le ali e volerà verso il cielo come un’aquila.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 34,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 32.5,
+                    "bbox_fs": [
+                        54,
+                        665,
+                        446,
+                        731
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        57,
+                        110,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                55,
+                                113,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        55,
+                                        113,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Turkish:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        78,
+                        374,
+                        140
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                77,
+                                243,
+                                95
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        77,
+                                        243,
+                                        95
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Zengin olmak için kendini yorma;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                93,
+                                173,
+                                110
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        93,
+                                        173,
+                                        110
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Dur ve anlayış göster.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                110,
+                                350,
+                                126
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        110,
+                                        350,
+                                        126
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Zenginliğe gözlerini dikeceksin, ama artık olmayacak,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                125,
+                                374,
+                                142
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        125,
+                                        374,
+                                        142
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Çünkü kesinlikle kanatlanıp kartal gibi gökyüzüne uçacaktır.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        156,
+                        138,
+                        172
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                156,
+                                140,
+                                175
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        156,
+                                        140,
+                                        175
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Vietnamese:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        177,
+                        371,
+                        240
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                176,
+                                293,
+                                195
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        176,
+                                        293,
+                                        195
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Đừng tự làm khổ mình để trở nên giàu có;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                194,
+                                257,
+                                208
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        194,
+                                        257,
+                                        208
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Hãy dừng lại và thể hiện sự hiểu biết.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                209,
+                                336,
+                                225
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        209,
+                                        336,
+                                        225
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Bạn sẽ nhìn vào sự giàu có, và nó không còn nữa,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                224,
+                                371,
+                                241
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        224,
+                                        371,
+                                        241
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Vì chắc chắn nó sẽ mọc cánh và bay lên trời như đại bàng.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 7.5
+                }
+            ],
+            "page_idx": 2,
+            "page_size": [
+                612,
+                792
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        57,
+                        110,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                55,
+                                113,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        55,
+                                        113,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Turkish:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        55,
+                        78,
+                        374,
+                        140
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                77,
+                                243,
+                                95
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        77,
+                                        243,
+                                        95
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Zengin olmak için kendini yorma;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                93,
+                                173,
+                                110
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        93,
+                                        173,
+                                        110
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Dur ve anlayış göster.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                110,
+                                350,
+                                126
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        110,
+                                        350,
+                                        126
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Zenginliğe gözlerini dikeceksin, ama artık olmayacak,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                55,
+                                125,
+                                374,
+                                142
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        125,
+                                        374,
+                                        142
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Çünkü kesinlikle kanatlanıp kartal gibi gökyüzüne uçacaktır.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5,
+                    "bbox_fs": [
+                        54,
+                        77,
+                        374,
+                        142
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        56,
+                        156,
+                        138,
+                        172
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                156,
+                                140,
+                                175
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        156,
+                                        140,
+                                        175
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Vietnamese:",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        177,
+                        371,
+                        240
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                176,
+                                293,
+                                195
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        176,
+                                        293,
+                                        195
+                                    ],
+                                    "score": 1.0,
+                                    "content": "4 Đừng tự làm khổ mình để trở nên giàu có;",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                194,
+                                257,
+                                208
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        194,
+                                        257,
+                                        208
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Hãy dừng lại và thể hiện sự hiểu biết.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                209,
+                                336,
+                                225
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        209,
+                                        336,
+                                        225
+                                    ],
+                                    "score": 1.0,
+                                    "content": "5 Bạn sẽ nhìn vào sự giàu có, và nó không còn nữa,",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                224,
+                                371,
+                                241
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        224,
+                                        371,
+                                        241
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Vì chắc chắn nó sẽ mọc cánh và bay lên trời như đại bàng.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 7.5,
+                    "bbox_fs": [
+                        53,
+                        176,
+                        371,
+                        241
+                    ]
+                }
+            ]
+        }
+    ],
+    "_backend": "pipeline",
+    "_version_name": "2.6.4"
+}
