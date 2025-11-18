@@ -1,49 +1,43 @@
-
-FROM nvidia/cuda:12.8.0-devel-ubuntu22.04
-ENV DEBIAN_FRONTEND=noninteractive \
-    PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1
-
-# for China
-# RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
-#    sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' /etc/apt/sources.list
-
-
-# 安装系统依赖
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3 python-is-python3 python3-pip \
-    python3-dev\
-    python3-venv\
-    vim \
-    git \
-    libgl1 \
-    libglib2.0-0 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-    # 创建虚拟环境（文件夹名：xinference-env）
-RUN python -m venv /opt/xinference-env
-
-# 直接使用虚拟环境里的 pip 安装 xinference（不需要 source 激活）
-RUN /opt/xinference-env/bin/pip install --upgrade pip && \
-    /opt/xinference-env/bin/pip install "xinference[transformers]"
-
-COPY xinference/xinference.sh   /opt/supervisor/xinference.sh
-COPY xinference/xinference.conf /etc/supervisor/conf.d/xinference.conf
-
-RUN python -m venv /opt/chat-env
-
-RUN /opt/chat-env/bin/pip install --upgrade pip && \
-    /opt/chat-env/bin/pip install "langchain-chatchat[xinference]" -U
-
-
-COPY langchain/langchain.sh   /opt/supervisor/langchain.sh
-COPY langchain/langchain.conf /etc/supervisor/conf.d/langchain.conf
-# 设置工作目录
+# 基础镜像
+FROM python:3.11
+LABEL maintainer=Langchain-Chatchat
 WORKDIR /root
-ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
-CMD []
 
+# 环境变量
+ENV CHATCHAT_ROOT=/root/chatchat_data
 
+# 初始化环境
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo "Asia/Shanghai" > /etc/timezone
+RUN apt-get update -y && \
+    apt-get install -y git && \
+    apt-get install -y --no-install-recommends libgl1 libglib2.0-0 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+RUN pip install --upgrade pip setuptools
+RUN pip install --index-url https://pypi.python.org/simple/ pipx && \
+    pipx install poetry --force
 
+# Add poetry to PATH
+ENV PATH="/root/.local/bin:${PATH}"
 
+# 下载 Langchain-Chatchat
+RUN git clone https://github.com/chatchat-space/Langchain-Chatchat.git
+
+# 安装依赖
+WORKDIR /root/Langchain-Chatchat/libs/chatchat-server
+RUN poetry config virtualenvs.create false
+RUN poetry install --with lint,test -E xinference
+
+## 确保 Python 可以找到 chatchat 模块
+ENV PYTHONPATH="/root/Langchain-Chatchat/libs/chatchat-server:${PYTHONPATH}"
+
+# 初始化配置
+WORKDIR /root/Langchain-Chatchat/libs/chatchat-server/chatchat
+RUN python cli.py init
+
+# 初始化知识库文件
+ADD data.tar.gz $CHATCHAT_ROOT/
+
+EXPOSE 7861 8501
+ENTRYPOINT []
