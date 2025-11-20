@@ -39,7 +39,35 @@ RUN python cli.py init
 WORKDIR /root
 RUN python -m venv /root/xinference
 RUN /root/xinference/bin/pip install "xinference[all]"
-RUN /root/xinference/bin/xinference-local --host 0.0.0.0 --port 9997
 
-EXPOSE 7861 8501
-ENTRYPOINT ["python", "cli.py", "start", "-a"]
+# 创建启动脚本，同时启动 xinference 和 langchain
+RUN cat > /root/start.sh << 'EOF'
+#!/bin/bash
+set -e
+
+# 启动 xinference 服务（使用虚拟环境 /root/xinference，后台运行）
+/root/xinference/bin/xinference-local --host 0.0.0.0 --port 9997 &
+XINFERENCE_PID=$!
+echo "Xinference started with PID: $XINFERENCE_PID"
+
+# 等待 xinference 启动
+sleep 5
+
+# 定义清理函数
+cleanup() {
+    echo "Shutting down services..."
+    kill $XINFERENCE_PID 2>/dev/null || true
+    exit 0
+}
+
+# 捕获退出信号
+trap cleanup SIGTERM SIGINT
+
+# 启动 langchain 服务（前台运行，保持容器运行）
+cd /root/Langchain-Chatchat/libs/chatchat-server/chatchat
+exec python cli.py start -a
+EOF
+RUN chmod +x /root/start.sh
+
+EXPOSE 7861 8501 9997
+ENTRYPOINT ["/root/start.sh"]
