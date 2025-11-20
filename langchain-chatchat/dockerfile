@@ -10,7 +10,7 @@ ENV CHATCHAT_ROOT=/root/chatchat_data
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone
 RUN apt-get update -y && \
-    apt-get install -y git && \
+    apt-get install -y git bash && \
     apt-get install -y --no-install-recommends libgl1 libglib2.0-0 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -40,31 +40,5 @@ WORKDIR /root
 RUN python -m venv /root/xinference
 RUN /root/xinference/bin/pip install "xinference[all]"
 
-# 创建启动脚本，同时启动 xinference 和 langchain
-RUN printf '#!/bin/bash\n\
-set -e\n\
-\n\
-# 启动 xinference 服务（使用虚拟环境 /root/xinference，后台运行）\n\
-/root/xinference/bin/xinference-local --host 0.0.0.0 --port 9997 &\n\
-XINFERENCE_PID=$!\n\
-echo "Xinference started with PID: $XINFERENCE_PID"\n\
-\n\
-# 等待 xinference 启动\n\
-sleep 5\n\
-\n\
-# 定义清理函数\n\
-cleanup() {\n\
-    echo "Shutting down services..."\n\
-    kill $XINFERENCE_PID 2>/dev/null || true\n\
-    exit 0\n\
-}\n\
-\n\
-# 捕获退出信号\n\
-trap cleanup SIGTERM SIGINT\n\
-\n\
-# 启动 langchain 服务（前台运行，保持容器运行）\n\
-cd /root/Langchain-Chatchat/libs/chatchat-server/chatchat\n\
-exec python cli.py start -a\n' > /root/start.sh && chmod +x /root/start.sh
-
 EXPOSE 7861 8501 9997
-ENTRYPOINT ["/root/start.sh"]
+ENTRYPOINT /root/xinference/bin/xinference-local --host 0.0.0.0 --port 9997 & sleep 10 && cd /root/Langchain-Chatchat/libs/chatchat-server/chatchat && exec python cli.py start -a
