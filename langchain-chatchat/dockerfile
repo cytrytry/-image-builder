@@ -36,6 +36,10 @@ ENV PYTHONPATH="/root/Langchain-Chatchat/libs/chatchat-server:${PYTHONPATH}"
 WORKDIR /root/Langchain-Chatchat/libs/chatchat-server/chatchat
 RUN python cli.py init
 
+WORKDIR /root
+RUN python -m venv /root/xinference
+RUN /root/xinference/bin/pip install "xinference[all]"
+RUN /root/xinference/bin/xinference-local --host 0.0.0.0 --port 9997
 
 EXPOSE 7861 8501
-ENTRYPOINT []
+ENTRYPOINT ["python", "cli.py", "start", "-a"]
