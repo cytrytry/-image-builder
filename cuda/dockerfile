@@ -1,5 +1,4 @@
 ARG BASE_IMAGE=cuda:13.0.0-cudnn-devel-ubuntu22.04
-
 FROM ${BASE_IMAGE}
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1

@@ -13,7 +13,6 @@ RUN apt update -y && apt install -y supervisor && \
     mkdir -p /opt/supervisor && \
     apt clean
 
-
 ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
 
 # install system packages
@@ -45,6 +44,10 @@ COPY sshd/sshd.conf       /etc/supervisor/conf.d/sshd.conf
 WORKDIR /root
 ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
 CMD []
+
+# install conda
+# RUN wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh -O conda.sh && \
+#     bash conda.sh -b && rm conda.sh && bash -c "source anaconda3/bin/activate && conda init"
 
 # install nvtop
 RUN apt install -y nvtop && apt clean
