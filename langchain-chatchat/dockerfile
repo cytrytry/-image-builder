@@ -41,4 +41,4 @@ RUN python -m venv /root/xinference
 RUN /root/xinference/bin/pip install "xinference[all]"
 
 EXPOSE 7861 8501 9997
-ENTRYPOINT /root/xinference/bin/xinference-local --host 0.0.0.0 --port 9997 
+CMD ["/root/xinference/bin/xinference-local", "--host", "0.0.0.0", "--port", "9997"]
