@@ -15,5 +15,5 @@ RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
 WORKDIR /root/stable-diffusion-webui
 RUN echo 'export STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"' >> webui-user.sh
 
-
-CMD ["./webui.sh", "-f", "--listen"]
+ENTRYPOINT ["bash"]
+CMD ["webui.sh -f --listen"]
