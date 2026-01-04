@@ -1,5 +1,19 @@
-FROM image.ppinfra.com/prod-gpucloudpublic/sd-webui:v1.10
+FROM image.ppinfra.com/prod-gpucloudpublic/cuda:12.3.2-cudnn9-devel-ubuntu22.04
 
+RUN apt-get update && apt-get install -y \
+    wget \
+    git \
+    python3 \
+    python3-venv \
+    libgl1 \
+    libglib2.0-0 \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /root
+RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
+
+WORKDIR /root/stable-diffusion-webui
 RUN echo 'export STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"' >> webui-user.sh
 
-CMD []
+
+CMD ["./webui.sh", "-f", "--listen"]
