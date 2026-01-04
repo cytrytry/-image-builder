@@ -29,10 +29,10 @@ RUN wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-web
 
 
 RUN cat > webui-user.sh << 'EOF'
-    #!/bin/bash
-    export STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"
-    ./webui.sh "$@"
-    EOF
+#!/bin/bash
+export STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"
+./webui.sh "$@"
+EOF
 RUN chmod +x webui-user.sh
 
 # 暴露端口
