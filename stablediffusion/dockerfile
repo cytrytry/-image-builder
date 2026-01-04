@@ -33,4 +33,4 @@ RUN wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-web
 
 
 EXPOSE 7860
-CMD ["./webui.sh"]
+CMD ["./webui.sh", "-f"]
