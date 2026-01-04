@@ -1,0 +1,5 @@
+FROM image.ppinfra.com/prod-gpucloudpublic/sd-webui:v1.10
+
+RUN echo 'export STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"' >> webui-user.sh
+
+CMD []
