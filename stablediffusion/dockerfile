@@ -1,14 +1,18 @@
-# 使用Python官方镜像
+# 使用Ubuntu 24.04作为基础镜像
 FROM ubuntu:24.04
-ENV DEBIAN_FRONTEND=noninteractive
-ENV PYTHONUNBUFFERED=1
+
+# 设置环境变量
 ENV STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
 
 # 安装系统依赖
 RUN apt-get update && apt-get install -y \
     wget \
     git \
-    python3.11 \
+    python3 \
+    python3-venv \
+    python3-pip \
     libgl1 \
     libglib2.0-0 \
     libsm6 \
@@ -17,7 +21,6 @@ RUN apt-get update && apt-get install -y \
     libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 
-# 创建工作目录
 WORKDIR /app
 
 # 克隆仓库
@@ -27,16 +30,13 @@ RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git .
 RUN wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh && \
     chmod +x webui.sh
 
-
 RUN cat > webui-user.sh << 'EOF'
 #!/bin/bash
 export STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"
 ./webui.sh "$@"
 EOF
+
 RUN chmod +x webui-user.sh
 
-# 暴露端口
 EXPOSE 7860
-
-# 设置启动命令
-CMD ["./webui.sh"]
+CMD ["./webui-user.sh"]
