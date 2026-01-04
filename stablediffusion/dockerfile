@@ -4,21 +4,21 @@ FROM ubuntu:24.04
 # 设置环境变量
 ENV STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"
 ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=Etc/UTC
+ENV python_cmd="python3.11"  # 设置为 Python 3.11
 
 # 安装系统依赖
 RUN apt-get update && apt-get install -y \
     wget \
     git \
-    python3 \
-    python3-venv \
-    python3-pip \
+    software-properties-common \
+    && add-apt-repository ppa:deadsnakes/ppa -y \
+    && apt-get update \
+    && apt-get install -y \
+    python3.11 \
+    python3.11-venv \
+    python3.11-dev \
     libgl1 \
     libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
