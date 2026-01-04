@@ -36,7 +36,5 @@ export STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"
 ./webui.sh "$@"
 EOF
 
-RUN chmod +x webui-user.sh
-
 EXPOSE 7860
-CMD ["./webui-user.sh"]
+CMD ["./webui.sh"]
