@@ -22,4 +22,3 @@ COPY audio.wav /opt/NeMo/audios/audio.wav
 
 
 
-CMD[]
