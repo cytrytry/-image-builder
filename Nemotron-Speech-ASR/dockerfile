@@ -1,0 +1,25 @@
+FROM nvcr.io/nvidia/nemo:25.11.01
+
+RUN apt-get update && apt-get install -y libsndfile1 ffmpeg && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN pip install Cython packaging
+RUN pip install git+https://github.com/NVIDIA/NeMo.git@main#egg=nemo_toolkit[asr]
+
+
+WORKDIR /opt/NeMo
+
+RUN mkdir models && mkdir audios
+
+WORKDIR /opt/NeMo/models
+
+RUN wget -O nemotron-speech-streaming-en-0.6b.nemo https://huggingface.co/nvidia/nemotron-speech-streaming-en-0.6b/resolve/main/nemotron-speech-streaming-en-0.6b.nemo
+
+WORKDIR /opt/NeMo/audios
+
+COPY audio.wav /opt/NeMo/audios/audio.wav
+
+
+
+
+CMD[]
