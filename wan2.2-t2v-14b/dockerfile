@@ -44,27 +44,22 @@ WORKDIR /root/ComfyUI
 RUN cd custom_nodes && git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
 
 RUN cd /root/ComfyUI/models/diffusion_models && \
-aria2c -k 1M -s 10 -x 10 https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors -o wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+curl -L -o wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors 
 
 RUN cd /root/ComfyUI/models/diffusion_models && \
-aria2c -k 1M -s 10 -x 10 https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors -o wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+curl -L -o wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors 
 
 RUN cd /root/ComfyUI/models/text_encoders && \
-aria2c -k 1M -s 10 -x 10 https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors -o umt5_xxl_fp8_e4m3fn_scaled.safetensors
+curl -L -o umt5_xxl_fp8_e4m3fn_scaled.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors 
 
 RUN cd /root/ComfyUI/models/vae && \
-aria2c -k 1M -s 10 -x 10 https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors -o wan_2.1_vae.safetensors
+curl -L -o wan_2.1_vae.safetensors https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors 
 
-RUN cd /root/ComfyUI/models/loras && \
-aria2c -k 1M -s 10 -x 10 https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors -o wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
-
-RUN cd /root/ComfyUI/models/loras && \
-aria2c -k 1M -s 10 -x 10 https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors -o wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors
 
 COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
 COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 
-#Copy ltx13b-i2v default workflow
+#Copy wan2.2-t2v-14b default workflow
 COPY video_wan2_2_14B_t2v.json /root/ComfyUI/user/default/workflows/video_wan2_2_14B_t2v.json
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]

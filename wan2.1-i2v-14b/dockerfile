@@ -1,0 +1,64 @@
+FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+# for China
+# RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
+#    sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' /etc/apt/sources.list
+# install supervisord
+RUN apt update -y && apt install -y supervisor && \
+    mkdir -p /var/log/supervisord && \
+    mkdir -p /opt/supervisor && \
+    apt clean 
+
+# install system packages
+RUN apt update -y && apt install -y \
+        python3 python-is-python3 python3-pip \
+        libgl1-mesa-glx \
+        ffmpeg \
+        libglib2.0-0 \
+        git aria2 && \
+    apt clean
+# install python packages
+    RUN pip install \
+        diffusers \
+        opencv-python
+
+# install jupyter
+RUN pip install jupyter && \
+    pip install nvitop && \
+    pip cache purge
+COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
+COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
+
+# for China
+# RUN python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip && \
+#     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+RUN cd /root && git clone https://github.com/comfyanonymous/ComfyUI && \
+    cd ComfyUI && pip install -r requirements.txt
+
+WORKDIR /root/ComfyUI
+
+#Download comfyui-manager
+RUN cd custom_nodes && git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
+
+RUN cd /root/ComfyUI/models/diffusion_models && \
+curl -L -o wan2.1_i2v_720p_14B_fp8_scaled.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp8_scaled.safetensors 
+
+RUN cd /root/ComfyUI/models/text_encoders && \
+curl -L -o umt5_xxl_fp8_e4m3fn_scaled.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors
+
+RUN cd /root/ComfyUI/models/vae && \
+curl -L -o wan_2.1_vae.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors
+
+RUN cd /root/ComfyUI/models/clip_vision && \
+curl -L -o clip_vision_h.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors 
+
+COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
+COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
+
+#Copy wan2.1-i2v-14b default workflow
+COPY wan2.1_i2v_720P.json /root/ComfyUI/user/default/workflows/wan2.1_i2v_720P.json
+
+CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]

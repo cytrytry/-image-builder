@@ -1,0 +1,57 @@
+FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+# for China
+# RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
+#    sed -i 's#http://.*.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' /etc/apt/sources.list
+# install supervisord
+RUN apt update -y && apt install -y supervisor && \
+    mkdir -p /var/log/supervisord && \
+    mkdir -p /opt/supervisor && \
+    apt clean 
+
+# install system packages
+RUN apt update -y && apt install -y \
+        python3 python-is-python3 python3-pip \
+        libgl1-mesa-glx \
+        ffmpeg \
+        libglib2.0-0 \
+        git aria2 && \
+    apt clean
+# install python packages
+    RUN pip install \
+        diffusers \
+        opencv-python
+
+# install jupyter
+RUN pip install jupyter && \
+    pip install nvitop && \
+    pip cache purge
+COPY jupyter/jupyter.sh   /opt/supervisor/jupyter.sh
+COPY jupyter/jupyter.conf /etc/supervisor/conf.d/jupyter.conf
+
+# for China
+# RUN python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip && \
+#     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+RUN cd /root && git clone https://github.com/comfyanonymous/ComfyUI && \
+    cd ComfyUI && pip install -r requirements.txt
+
+WORKDIR /root/ComfyUI
+
+#Download comfyui-manager
+RUN cd custom_nodes && git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
+
+RUN cd /root/ComfyUI/models/checkpoints && \
+curl -L -o hunyuan3d-dit-v2_fp16.safetensors https://huggingface.co/tencent/Hunyuan3D-2mv/resolve/main/hunyuan3d-dit-v2-mv/model.fp16.safetensors
+
+
+
+COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
+COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
+
+#Copy hunyuan3d-dit-v2 default workflow
+COPY hunyuan3d-dit-v2.json /root/ComfyUI/user/default/workflows/hunyuan3d-dit-v2.json
+
+CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
