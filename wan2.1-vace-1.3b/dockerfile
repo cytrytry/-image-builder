@@ -56,7 +56,7 @@ curl -L -o wan_2.1_vae.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_Comf
 RUN cd /root/ComfyUI/models/clip_vision && \
 curl -L -o clip_vision_h.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors 
 
-RUN cd /root/ComfyUI/models/clip_vision && \
+RUN cd /root/ComfyUI/models/loras && \
 curl -L -o Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors  https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors 
 
 COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
