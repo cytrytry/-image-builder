@@ -60,6 +60,7 @@ COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
 COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 
 #Copy wan2.1-vace-14b default workflow
-COPY wan2.1_i2v_720P.json /root/ComfyUI/user/default/workflows/wan2.1_i2v_720P.json
+COPY wan2.1_vace_t2v.json /root/ComfyUI/user/default/workflows/wan2.1_vace_t2v.json
+COPY wan2.1_vace_iv2.json /root/ComfyUI/user/default/workflows/wan2.1_vace_iv2.json
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
