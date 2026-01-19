@@ -59,6 +59,6 @@ COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
 COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 
 #Copy flux1-fp8 default workflow
-COPY Flux-Dev-ComfyUI-Workflow.json /root/ComfyUI/user/default/workflows/Flux-Dev-ComfyUI-Workflow.json
+COPY Flux-Schnell-ComfyUI-Workflow.json /root/ComfyUI/user/default/workflows/Flux-Schnell-ComfyUI-Workflow.json
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
