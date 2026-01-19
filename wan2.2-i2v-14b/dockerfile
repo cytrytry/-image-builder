@@ -61,6 +61,6 @@ COPY comfyui/comfyui.sh         /opt/supervisor/comfyui.sh
 COPY comfyui/comfyui.conf       /etc/supervisor/conf.d/comfyui.conf
 
 #Copy wan2.2-i2v-14b default workflow
-COPY video_wan2_2_14B_i2v.json /root/ComfyUI/user/default/workflows/video_wan2_2_14B_i2v.json
+COPY video_wan2_2_14B_i2v.json /root/ComfyUI/user/default/workflows/video_wan2_2_14B_i2v.jsonA
 
 CMD  ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
