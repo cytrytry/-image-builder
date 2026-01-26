@@ -36,4 +36,7 @@ RUN /bin/bash -c "mineru-models-download -s modelscope -m all"
 RUN python3 -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='opendatalab/MinerU2.5-2509-1.2B', cache_dir='/root/.cache/huggingface')" || \
     echo "Warning: MinerU2.5-2509-1.2B pre-download failed, will download at runtime"
 
+
+RUN git clone https://github.com/opendatalab/MinerU.git && cd MinerU/demo
+
 ENTRYPOINT []
